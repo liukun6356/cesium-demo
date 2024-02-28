@@ -1,0 +1,716 @@
+{
+  "baseMap": {
+    "id": 1,
+    "label": "图层",
+    "type": "group",
+    "menu": true,
+    "children": [
+      {
+        "id": 11,
+        "label": "天地图",
+        "type": "group",
+        "visible": true,
+        "show": true,
+        "disabled": true
+      },
+      {
+        "id": 12,
+        "label": "天地图-电子",
+        "type": "group",
+        "visible": false,
+        "show": true,
+        "layers": [
+          {
+            "name": "底图",
+            "type": "www_tdt",
+            "layer": "vec_d",
+            "key": [
+              "9f3fb7070696c453e7427a4844d279ae"
+            ]
+          },
+          {
+            "name": "注记",
+            "type": "www_tdt",
+            "layer": "vec_z",
+            "key": [
+              "9f3fb7070696c453e7427a4844d279ae"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "label": "天地图-电子(深色)",
+        "type": "group",
+        "visible": false,
+        "show": true,
+        "layers": [
+          {
+            "name": "底图",
+            "type": "www_tdt",
+            "layer": "vec_d",
+            "key": [
+              "9f3fb7070696c453e7427a4844d279ae"
+            ]
+          },
+          {
+            "name": "注记",
+            "type": "www_tdt",
+            "layer": "vec_z",
+            "key": [
+              "9f3fb7070696c453e7427a4844d279ae"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "type": "terrain",
+        "visible": false,
+        "show": true,
+        "label": "天地图-三维地形",
+        "url": "https://gisearth-1301434080.cos.ap-nanjing.myqcloud.com/MapData/terrain"
+      }
+    ]
+  },
+  "model": {
+    "id": "@@redux/INITt,k,w,9,h",
+    "label": "三维模型",
+    "menu": true,
+    "children": [
+      {
+        "position": {
+          "x": 99.150379,
+          "y": 25.130117,
+          "z": 433.0871503076636
+        },
+        "id": "@@redux/INITw,4,4,4,y,l",
+        "label": "树木"
+      }
+    ]
+  },
+  "mark2": {
+    "id": "@@redux/INITe,f,k,l,9,4",
+    "label": "二维标注",
+    "menu": true,
+    "children": [
+      {
+        "position": "",
+        "id": "@@redux/INIT3,m,p,l,h",
+        "label": "线"
+      },
+      {
+        "position": "",
+        "id": "@@redux/INITq,0,n,7,o,n",
+        "label": "虚线"
+      },
+      {
+        "position": {
+          "x": 99.150348,
+          "y": 25.132521,
+          "z": 936.9640985927151
+        },
+        "id": "@@redux/INITv,k,g,k,y,9",
+        "label": "面"
+      },
+      {
+        "position": {
+          "x": 99.148521,
+          "y": 25.128187,
+          "z": 771.8772937793591
+        },
+        "id": "@@redux/INITb,n,3,g,i",
+        "label": "矩形"
+      },
+      {
+        "position": {
+          "x": 99.150817,
+          "y": 25.127817,
+          "z": 299.99406471902654
+        },
+        "id": "@@redux/INITb,q,6,q,x,a",
+        "label": "文字"
+      }
+    ]
+  },
+  "mark3": {
+    "id": "@@redux/INITc,5,g,u,8,b",
+    "label": "三维标注",
+    "menu": true,
+    "children": [
+      {
+        "position": "",
+        "id": "@@redux/INITf,g,p,7,d",
+        "label": "墙体"
+      },
+      {
+        "position": "",
+        "id": "@@redux/INITv,9,x,v,d,b",
+        "label": "动态墙"
+      },
+      {
+        "position": "",
+        "id": "@@redux/INITz,9,f,l,p,n",
+        "label": "动态箭头"
+      }
+    ]
+  },
+  "effect": {
+    "id": "@@redux/INITi,v,3,o,k,9",
+    "label": "场景特效",
+    "menu": true,
+    "children": [
+      {
+        "position": {
+          "x": 99.149605,
+          "y": 25.127286,
+          "z": -0.0010747737209531837
+        },
+        "id": "@@redux/INITb,u,z,6,w,h",
+        "label": "火"
+      },
+      {
+        "position": {
+          "x": 99.149367,
+          "y": 25.127025,
+          "z": -0.0010807420230318587
+        },
+        "id": "@@redux/INITg,c,h,x,q,d",
+        "label": "烟"
+      },
+      {
+        "position": {
+          "x": 99.149957,
+          "y": 25.126805,
+          "z": -0.00116277221587692
+        },
+        "id": "@@redux/INITs,y,3,k,m,3",
+        "label": "点光源"
+      },
+      {
+        "position": {
+          "x": 99.150674,
+          "y": 25.127003,
+          "z": -0.0011047871122574148
+        },
+        "id": "@@redux/INITb,r,e,v,t,q",
+        "label": "聚光源"
+      },
+      {
+        "position": {
+          "x": 99.150354,
+          "y": 25.126543,
+          "z": 177.33194882711993
+        },
+        "id": "@@redux/INITk,8,3,n,0,q",
+        "label": "水"
+      }
+    ]
+  },
+  "geoJSON": {
+    "type": "FeatureCollection",
+    "group": [
+      "默认分组"
+    ],
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "polyline",
+          "label": "线",
+          "particleType": "solid",
+          "id": "@@redux/INIT3,m,p,l,h",
+          "style": {
+            "animationImage": "img/dzdxEdit/lineClr.png",
+            "dashLength": 16
+          },
+          "group": "默认分组",
+          "attr": {}
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              99.148688,
+              25.131979,
+              -0.01
+            ],
+            [
+              99.146454,
+              25.129812,
+              0
+            ],
+            [
+              99.147331,
+              25.128843,
+              -0.01
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "polyline",
+          "label": "虚线",
+          "particleType": "dash",
+          "id": "@@redux/INITq,0,n,7,o,n",
+          "style": {
+            "lineType": "dash",
+            "animationImage": "img/dzdxEdit/lineClr.png",
+            "dashLength": 16
+          },
+          "group": "默认分组",
+          "attr": {}
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              99.151652,
+              25.132435,
+              0
+            ],
+            [
+              99.155096,
+              25.132321,
+              -0.01
+            ],
+            [
+              99.155388,
+              25.131542,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "label": "面",
+          "type": "polygon",
+          "particleType": "polygon",
+          "id": "@@redux/INITv,k,g,k,y,9",
+          "style": {
+            "color": "#29cf34",
+            "opacity": 0.5,
+            "outlineWidth": 2,
+            "clampToGround": true
+          },
+          "group": "默认分组",
+          "attr": {}
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                99.148834,
+                25.132701,
+                0
+              ],
+              [
+                99.150754,
+                25.131808,
+                0
+              ],
+              [
+                99.151297,
+                25.132834,
+                0
+              ],
+              [
+                99.151861,
+                25.133233,
+                0
+              ],
+              [
+                99.148834,
+                25.132701,
+                0
+              ],
+              [
+                99.148834,
+                25.132701,
+                0
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "rectangle",
+          "label": "矩形",
+          "particleType": "rectangle",
+          "id": "@@redux/INITb,n,3,g,i",
+          "style": {
+            "color": "#29cf34",
+            "outlineWidth": 2,
+            "clampToGround": true
+          },
+          "group": "默认分组",
+          "attr": {}
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              99.147749,
+              25.127779,
+              0
+            ],
+            [
+              99.149293,
+              25.128596,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "billboard",
+          "label": "文字",
+          "particleType": "billboard",
+          "id": "@@redux/INITb,q,6,q,x,a",
+          "style": {
+            "image": "img/dzdxEdit/location.png",
+            "label": {
+              "text": "文字",
+              "font_size": 20,
+              "color": "#ffffff",
+              "opacity": 1,
+              "font_family": "微软雅黑",
+              "border": true,
+              "border_color": "#000000",
+              "border_width": 3,
+              "background": false,
+              "background_color": "#000000",
+              "background_opacity": 1,
+              "font_weight": false,
+              "font_style": false,
+              "scaleByDistance": false,
+              "scaleByDistance_far": 1000000,
+              "scaleByDistance_farValue": 0.1,
+              "scaleByDistance_near": 1000,
+              "scaleByDistance_nearValue": 1,
+              "distanceDisplayCondition": false,
+              "distanceDisplayCondition_far": 100000,
+              "distanceDisplayCondition_near": 0,
+              "pixelOffsetX": 36,
+              "pixelOffsetY": -8,
+              "visibleDepth": true,
+              "clampToGround": true
+            }
+          },
+          "group": "默认分组",
+          "attr": {}
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            99.150817,
+            25.127817,
+            -0.01
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "model",
+          "label": "树木",
+          "particleType": "tree",
+          "id": "@@redux/INITw,4,4,4,y,l",
+          "style": {
+            "modelUrl": "img/dzdxEdit/tree.glb",
+            "scale": 10,
+            "hasShadows": true,
+            "clampToGround": true,
+            "radius": 70.4114786668571
+          },
+          "editType": "point",
+          "group": "默认分组",
+          "attr": {}
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            99.150379,
+            25.130117,
+            133.09
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "wall",
+          "label": "墙体",
+          "particleType": "wall",
+          "id": "@@redux/INITf,g,p,7,d",
+          "style": {},
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              99.150148,
+              25.127649,
+              0
+            ],
+            [
+              99.150297,
+              25.127941,
+              0
+            ],
+            [
+              99.150241,
+              25.128075,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "wall",
+          "label": "动态墙",
+          "particleType": "dynamicWall",
+          "id": "@@redux/INITv,9,x,v,d,b",
+          "style": {
+            "lineType": "动态墙",
+            "fillType": "animationLine",
+            "animationImage": "img/dzdxEdit/fence.png",
+            "hasShadows": false
+          },
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              99.151362,
+              25.127995,
+              0
+            ],
+            [
+              99.15132,
+              25.12763,
+              2.68
+            ],
+            [
+              99.151103,
+              25.127491,
+              0.01
+            ],
+            [
+              99.151103,
+              25.127491,
+              0.03
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "wall",
+          "label": "动态箭头",
+          "particleType": "arrowWall",
+          "id": "@@redux/INITz,9,f,l,p,n",
+          "style": {
+            "lineType": "动态箭头",
+            "fillType": "animationLine",
+            "animationImage": "img/dzdxEdit/arrow.png",
+            "animationRepeatX": 10,
+            "hasShadows": false
+          },
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              99.150932,
+              25.127297,
+              0
+            ],
+            [
+              99.15052,
+              25.127306,
+              0
+            ],
+            [
+              99.15055,
+              25.127486,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "point",
+          "label": "火",
+          "particleType": "fire",
+          "id": "@@redux/INITb,u,z,6,w,h",
+          "show": false,
+          "style": {
+            "pixelSize": 12,
+            "visibleDepth": false,
+            "show": false
+          },
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            99.149605,
+            25.127286,
+            0
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "point",
+          "label": "烟",
+          "particleType": "smoke",
+          "id": "@@redux/INITg,c,h,x,q,d",
+          "show": false,
+          "style": {
+            "pixelSize": 12,
+            "visibleDepth": false,
+            "show": false
+          },
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            99.149367,
+            25.127025,
+            0
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "point",
+          "label": "点光源",
+          "particleType": "pointLight",
+          "id": "@@redux/INITs,y,3,k,m,3",
+          "show": false,
+          "style": {
+            "pixelSize": 12,
+            "visibleDepth": false,
+            "show": false
+          },
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            99.149957,
+            25.126805,
+            0
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "point",
+          "label": "聚光源",
+          "particleType": "gatherLight",
+          "id": "@@redux/INITb,r,e,v,t,q",
+          "show": false,
+          "style": {
+            "pixelSize": 12,
+            "visibleDepth": false,
+            "show": false
+          },
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            99.150674,
+            25.127003,
+            0
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "type": "polygon",
+          "label": "水",
+          "particleType": "water",
+          "id": "@@redux/INITk,8,3,n,0,q",
+          "style": {
+            "color": "#007be6",
+            "opacity": 0.5,
+            "perPositionHeight": true,
+            "outline": false
+          },
+          "group": "默认分组"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                99.150566,
+                25.126646,
+                0
+              ],
+              [
+                99.15115,
+                25.126578,
+                0
+              ],
+              [
+                99.150533,
+                25.126835,
+                0
+              ],
+              [
+                99.149561,
+                25.126254,
+                0
+              ],
+              [
+                99.149557,
+                25.126251,
+                0
+              ],
+              [
+                99.150566,
+                25.126646,
+                0
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "cameraView": {
+    "y": 25.127608,
+    "x": 99.151023,
+    "z": 628.81,
+    "heading": 360,
+    "pitch": -90,
+    "roll": 0
+  }
+}

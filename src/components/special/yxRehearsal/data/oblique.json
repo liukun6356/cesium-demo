@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "markerTreeType": "倾斜摄影范围",
+        "type": "polygon",
+        "style": {
+          "color": "#29cf34",
+          "opacity": 0.5,
+          "outline": true,
+          "outlineWidth": 2,
+          "clampToGround": false,
+          "fill": true,
+          "fillType": "color",
+          "grid_lineCount": 8,
+          "grid_lineThickness": 2,
+          "grid_cellAlpha": 0.1,
+          "stripe_oddcolor": "#ffffff",
+          "stripe_repeat": 6,
+          "checkerboard_oddcolor": "#ffffff",
+          "checkerboard_repeat": 4,
+          "stRotation": 0,
+          "outlineColor": "#ffffff",
+          "outlineOpacity": 0.6,
+          "distanceDisplayCondition": false,
+          "distanceDisplayCondition_far": 100000,
+          "distanceDisplayCondition_near": 0,
+          "zIndex": 0
+        },
+        "attr": {
+          "name": "面",
+          "id": "96cfeb99-cbca-4a43-a3e4-d7cde689931d"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.516236,
+              24.422319,
+              1643.68
+            ],
+            [
+              102.5229,
+              24.444718,
+              1725.73
+            ],
+            [
+              102.546308,
+              24.434541,
+              1639.13
+            ],
+            [
+              102.541919,
+              24.40729,
+              1619.87
+            ],
+            [
+              102.536441,
+              24.409008,
+              1626.36
+            ],
+            [
+              102.536413,
+              24.40902,
+              1630.07
+            ],
+            [
+              102.535925,
+              24.406561,
+              1617.7
+            ],
+            [
+              102.529761,
+              24.408985,
+              1617.12
+            ],
+            [
+              102.52731,
+              24.402263,
+              1615.34
+            ],
+            [
+              102.519923,
+              24.406823,
+              1626.73
+            ],
+            [
+              102.521381,
+              24.410691,
+              1640.79
+            ],
+            [
+              102.520494,
+              24.411062,
+              1641.9
+            ],
+            [
+              102.523031,
+              24.420196,
+              1650.11
+            ],
+            [
+              102.522561,
+              24.420324,
+              1630.43
+            ],
+            [
+              102.521359,
+              24.420618,
+              1633.44
+            ],
+            [
+              102.520568,
+              24.420846,
+              1637.79
+            ],
+            [
+              102.519929,
+              24.421058,
+              1640.05
+            ],
+            [
+              102.518577,
+              24.421518,
+              1640.78
+            ],
+            [
+              102.516236,
+              24.422319,
+              1643.68
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

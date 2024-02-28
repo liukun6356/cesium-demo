@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon1</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00_登录页" transform="translate(-350.000000, -700.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="1.6">
+            <g id="编组-18" transform="translate(290.000000, 640.000000)">
+                <g id="编组-8" transform="translate(60.000000, 60.000000)">
+                    <g id="编组-2" transform="translate(8.000000, 9.000000)">
+                        <circle id="椭圆形" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="5" r="5.8"></circle>
+                        <circle id="椭圆形" stroke-linecap="round" stroke-linejoin="round" cx="5" cy="25" r="5.8"></circle>
+                        <circle id="椭圆形" stroke-linecap="round" stroke-linejoin="round" cx="27" cy="25" r="5.8"></circle>
+                        <path d="M9.40949504,28.4646581 C11.1978838,29.4435213 13.2502018,30 15.4324249,30 C16.8768509,30 18.2643631,29.756196 19.5560952,29.3074744 M27.8439018,19.4133142 C27.9466397,18.7659634 28,18.1021583 28,17.4258838 C28,14.0470538 26.6679976,10.9794916 24.5007081,8.72017103 M10.1783523,6 C6.39690244,7.74355341 3.62864719,11.3109925 3,15.5753175" id="形状"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

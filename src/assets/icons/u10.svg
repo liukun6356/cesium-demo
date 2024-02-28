@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>chongzhi</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00_登录页" transform="translate(-1138.000000, -513.000000)" fill-rule="nonzero" stroke="#D3D3D3" stroke-width="0.933333333">
+            <g id="编组-25" transform="translate(670.000000, 502.000000)">
+                <g id="编组-5" transform="translate(415.000000, 0.000000)">
+                    <g id="编组-23" transform="translate(53.000000, 9.000000)">
+                        <g id="编组-22" transform="translate(2.000000, 3.468251)">
+                            <path d="M6.06666667,1.39841594 C2.71613918,1.39841594 0,4.11455513 0,7.46508261 C0,10.8156101 2.71613918,13.5317493 6.06666667,13.5317493 C9.41719415,13.5317493 12.1333333,10.8156101 12.1333333,7.46508261" id="路径"></path>
+                            <polyline id="路径" transform="translate(3.733333, 2.798416) rotate(-77.000000) translate(-3.733333, -2.798416) " points="6.06666667 0.465082611 6.06666667 5.13174928 1.4 5.13174928"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

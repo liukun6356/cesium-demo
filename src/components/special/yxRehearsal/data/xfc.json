@@ -1,0 +1,32 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "polyline",
+        "name": "markerLine",
+        "config": {
+          "minPointNum": 2
+        },
+        "style": {
+          "lineType": "animation",
+          "animationDuration": 2000,
+          "width": 5,
+          "animationImage": "./img/lineClr.png",
+          "color": "#00ff26",
+          "clampToGround": true
+        },
+        "attr": {
+          "name": "markerLine",
+          "addType": "markerLine"
+        },
+        "type": "polyline"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": []
+      }
+    }
+  ]
+}

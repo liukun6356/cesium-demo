@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>机组</title>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-46.000000, -760.000000)" stroke="#FFFFFF">
+            <g id="机组" transform="translate(46.000000, 760.000000)">
+                <g id="编组-8" transform="translate(5.364583, 3.218750)">
+                    <circle id="椭圆形" stroke-width="1.33170732" cx="7.12098765" cy="22.2530864" r="5.34074074"></circle>
+                    <line x1="0.915332031" y1="22.2530864" x2="13.4396472" y2="22.2530864" id="直线-2" stroke-width="1.33170732"></line>
+                    <rect id="矩形" stroke-width="1.33170732" x="16.0222222" y="4.45061728" width="8.90123457" height="24.9234568" rx="4.45061728"></rect>
+                    <polyline id="路径-5" points="26.7037037 14.9056562 20.4728395 14.9056562 20.4728395 9.79135802 7.12098765 9.79135802 7.12098765 13.024575"></polyline>
+                    <line x1="18.6925926" y1="0.890123457" x2="22.3408818" y2="0.890123457" id="直线-3" stroke-width="1.33170732"></line>
+                    <line x1="10.6814815" y1="27.5938272" x2="12.4617284" y2="27.5938272" id="直线-3备份-2" stroke-width="1.33170732" transform="translate(11.571605, 27.593827) rotate(45.000000) translate(-11.571605, -27.593827) "></line>
+                    <line x1="1.78024691" y1="27.5938272" x2="3.56049383" y2="27.5938272" id="直线-3备份-2" stroke-width="1.33170732" transform="translate(2.670370, 27.593827) scale(-1, 1) rotate(45.000000) translate(-2.670370, -27.593827) "></line>
+                    <line x1="5.38463843" y1="13.3518519" x2="9.03292764" y2="13.3518519" id="直线-3备份" stroke-width="1.33170732"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
