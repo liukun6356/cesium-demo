@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <script type="text/javascript" src="./jsLib/lib/include-lib.js" libpath="./jsLib/lib/"
+            include="jquery,jquery.range,font-awesome,bootstrap_css,layui,yingjiyujing,haoutil,toastr,jstree,das2d"></script>
+    <link href="./css/pretty.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--静态引入cesium1.76-->
+    <link rel="stylesheet" href="./js/cesium1.76/Widgets/widgets.css">
+    <script src="./js/cesium1.76/Cesium.js"></script>
+    <link rel="stylesheet" href="./js/cesium1.76/das3d/das3d-src.css"/>
+    <script src="./js/cesium1.76/das3d/das3d-src.js"></script>
+    <script src="./js/cesium1.76/plugins/wind/das3d-wind-src.js"></script>
+
+    <!--静态引入cesium 1.103-->
+    <!--    <link rel="stylesheet" href="./js/cesium1.103/Widgets/widgets.css">-->
+    <!--    <script src="./js/cesium1.103/Cesium.js"></script>-->
+    <!--    <link rel="stylesheet" href="./js/cesium1.103/das3d/das3d-src.css"/>-->
+    <!--    <script src="./js/cesium1.103/das3d/das3d-src.js"></script>-->
+    <!--    <script src="./js/cesium1.103/plugins/wind/das3d-wind-src.js"></script>-->
+</head>
+
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+
+</html>
