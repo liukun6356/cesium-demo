@@ -1,0 +1,469 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "label",
+        "name": "文字",
+        "style": { "text": "大势智慧" },
+        "attr": { "id": "20181221103435" },
+        "type": "label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.853926, 31.517117, 684.42 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "label",
+        "name": "文字",
+        "style": {
+          "text": "未来地图 三维地球",
+          "color": "#f5ea23",
+          "opacity": 0.95,
+          "border_color": "#383838",
+          "font_size": 40,
+          "scaleByDistance": true,
+          "scaleByDistance_far": 10000000
+        },
+        "attr": { "id": "20181221102439" },
+        "type": "label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.669727, 31.778208, 913.25 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "model",
+        "name": "模型",
+        "style": {
+          "modelUrl": "data/gltf/fengche.gltf",
+          "scale": 800,
+          "heading": 270
+        },
+        "attr": { "id": "20181221102302" },
+        "type": "model"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.546906, 31.696247, 1538.57 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "polyline",
+        "name": "线",
+        "config": {
+          "minPointNum": 2,
+          "height": true
+        },
+        "style": {},
+        "attr": { "id": "20181221102336" },
+        "type": "polyline"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ 115.565745, 31.711304, 1455.33 ],
+          [ 115.597012, 31.682035, 983.72 ],
+          [ 115.594033, 31.731812, 1245.02 ],
+          [ 115.6203, 31.702651, 966.97 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "polyline",
+        "name": "线",
+        "config": {
+          "minPointNum": 2,
+          "height": true
+        },
+        "style": {
+          "color": "#ffff00",
+          "clampToGround": true
+        },
+        "attr": { "id": "20181221102330" },
+        "type": "polyline"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ 115.607213, 31.764607, 190.98 ],
+          [ 115.653136, 31.687136, 338.28 ],
+          [ 115.605494, 31.658705, 354.49 ],
+          [ 115.542221, 31.669483, 423.5 ],
+          [ 115.522699, 31.706683, 951.63 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "polyline",
+        "name": "线",
+        "config": {
+          "minPointNum": 2,
+          "height": true
+        },
+        "style": {},
+        "attr": { "id": "20181221102359" },
+        "type": "curve"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ 115.709416, 31.736357, 279.72 ],
+          [ 115.720283, 31.700903, 850.26 ],
+          [ 115.753477, 31.734801, 873 ],
+          [ 115.756002, 31.694914, 751.43 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "polyline",
+        "name": "线",
+        "config": {
+          "minPointNum": 2,
+          "height": true
+        },
+        "style": {
+          "color": "#ffff00",
+          "clampToGround": true
+        },
+        "attr": { "id": "20181221102410" },
+        "type": "curve"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ 115.692824, 31.757497, 350.6 ],
+          [ 115.686964, 31.686278, 659.93 ],
+          [ 115.753414, 31.67345, 573.19 ],
+          [ 115.79997, 31.697851, 163.64 ],
+          [ 115.794051, 31.746961, 359.99 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "polygon",
+        "name": "面",
+        "style": {},
+        "attr": { "id": "20181221102455" },
+        "type": "polygon"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 115.628888, 31.654748, 608.32 ],
+            [ 115.626327, 31.639529, 416.53 ],
+            [ 115.643092, 31.632951, 422.81 ],
+            [ 115.657527, 31.641133, 239.85 ],
+            [ 115.65125, 31.656872, 347.35 ],
+            [ 115.628888, 31.654748, 608.32 ],
+            [ 115.628888, 31.654748, 608.32 ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "rectangle",
+        "name": "矩形",
+        "config": {
+          "height": false,
+          "minPointNum": 2,
+          "maxPointNum": 2
+        },
+        "style": { "height": 448.11 },
+        "attr": { "id": "20181221102512" },
+        "type": "rectangle"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 115.696165, 31.656554, 448.11 ],
+          [ 115.723567, 31.639548, 353.66 ]
+        ]
+      }
+    },    
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "circle",
+        "name": "圆",
+        "config": { "height": false },
+        "style": {
+          "radius": 1947.95,
+          "height": 918.04,
+          "fill": true,
+          "color": "#3388ff",
+          "opacity": 0.6,
+          "outline": true,
+          "outlineWidth": 1,
+          "outlineColor": "#ffffff",
+          "outlineOpacity": 0.6,
+          "rotation": 0,
+          "clampToGround": false,
+          "zIndex": 0
+        },
+        "attr": {
+          "id": "20181221102540",
+          "name": "",
+          "remark": ""
+        },
+        "type": "circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.488886, 31.617939, 918.04 ]
+      }
+    },
+   
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "ellipse",
+        "name": "椭圆",
+        "config": { "height": false },
+        "style": {
+          "semiMinorAxis": 1253.28,
+          "semiMajorAxis": 2799.9,
+          "height": 206.67
+        },
+        "attr": { "id": "20181221102931" },
+        "type": "ellipse"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.833715, 31.625988, 206.67 ]
+      }
+    },
+    
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "rectangleImg",
+        "name": "图片",
+        "config": {
+          "height": false,
+          "minPointNum": 2,
+          "maxPointNum": 2
+        },
+        "style": { "image": "img/world/gugong.jpg" },
+        "attr": { "id": "20181221102620" },
+        "type": "rectangle"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 115.663157, 31.625478, 243.51 ],
+          [ 115.705204, 31.588088, 143.4 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "extrudedEllipse",
+        "name": "椭圆柱体",
+        "config": { "height": false },
+        "style": {
+          "semiMinorAxis": 1387.75,
+          "semiMajorAxis": 2251.55,
+          "extrudedHeight": 1882.89,
+          "height": 204.37
+        },
+        "attr": { "id": "20181221102828" },
+        "type": "ellipse"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.853226, 31.591226, 204.37 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "extrudedCircle",
+        "name": "圆柱体",
+        "config": { "height": false },
+        "style": {
+          "radius": 1828.12,
+          "extrudedHeight": 1830.5,
+          "height": 354.2,
+          "fill": true,
+          "color": "#00FF00",
+          "opacity": 0.6,
+          "outline": true,
+          "outlineWidth": 1,
+          "outlineColor": "#ffffff",
+          "outlineOpacity": 0.6,
+          "rotation": 0,
+          "zIndex": 0
+        },
+        "attr": {
+          "id": "20181221102836",
+          "name": "",
+          "remark": ""
+        },
+        "type": "circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.528411, 31.640854, 354.2 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "extrudedRectangle",
+        "name": "拉伸矩形",
+        "config": {
+          "height": false,
+          "minPointNum": 2,
+          "maxPointNum": 2
+        },
+        "style": {
+          "extrudedHeight": 2400.07,
+          "height": 454.55
+        },
+        "attr": { "id": "20181221102920" },
+        "type": "rectangle"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 115.760742, 31.663545, 454.55 ],
+          [ 115.791502, 31.643406, 454.55 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "wall",
+        "name": "墙体",
+        "config": {
+          "minPointNum": 2,
+          "height": true
+        },
+        "style": {
+          "extrudedHeight": 7069.25,
+          "color": "#360073"
+        },
+        "attr": { "id": "20181221103342" },
+        "type": "wall"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ 115.366452, 31.731949, 103.42 ],
+          [ 115.423129, 31.887372, 40.59 ],
+          [ 115.684152, 31.95294, 71.73 ],
+          [ 115.954404, 31.870407, 21.91 ],
+          [ 115.989676, 31.728376, 102.78 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "point",
+        "name": "点标记",
+        "style": {
+          "pixelSize": 20,
+          "color": "#fa3232"
+        },
+        "attr": { "id": "20181221103349" },
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.61912, 31.569735, 219.84 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "point",
+        "name": "点标记",
+        "style": {},
+        "attr": { "id": "20181221103350" },
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.749757, 31.558215, 109.58 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "imagepoint",
+        "name": "图标点标记",
+        "style": { "image": "img/marker/mark1.png" },
+        "attr": { "id": "20181221103237" },
+        "type": "billboard"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.627093, 31.526118, 434.19 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "imagepoint",
+        "name": "图标点标记",
+        "style": {
+          "image": "img/marker/mark3.png",
+          "scaleByDistance": true
+        },
+        "attr": { "id": "20181221103253" },
+        "type": "billboard"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 115.669392, 31.520227, 408.06 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "edittype": "extrudedPolygon",
+        "name": "拉伸面",
+        "style": { "extrudedHeight": 3244.22 },
+        "attr": { "id": "20181221103422" },
+        "type": "polygon"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 115.515863, 31.532501, 389.43 ],
+            [ 115.505859, 31.499702, 185.57 ],
+            [ 115.539847, 31.476436, 258.52 ],
+            [ 115.565705, 31.496366, 407.13 ],
+            [ 115.552393, 31.523197, 473.95 ],
+            [ 115.515863, 31.532501, 389.43 ]
+          ]
+        ]
+      }
+    }
+  ]
+}

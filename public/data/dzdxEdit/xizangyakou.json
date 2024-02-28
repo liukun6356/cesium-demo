@@ -1,0 +1,294 @@
+{
+  "type": "FeatureCollection",
+  "crs": { "type": "name", "properties": { "name": "EPSG:4490" } },
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [98.003258398000071, 29.716620766000062]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "NID": "1",
+        "NAME": "东达山（海拔5130米）",
+        "图片": "1.jpg",
+        "lng": "98.0032583980001",
+        "lat": "29.7166207660001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [81.312042635000068, 31.067444020000039]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "NID": "2",
+        "NAME": "冈仁波齐峰（海拔6656米）",
+        "图片": "2.jpg",
+        "lng": "81.3120426350001",
+        "lat": "31.06744402"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [87.437080440000045, 28.953318742000079]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "NID": "3",
+        "NAME": "嘉措拉山口（海拔5248米）",
+        "图片": "3.jpg",
+        "lng": "87.43708044",
+        "lat": "28.9533187420001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [87.089118072000076, 27.889856259000055]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "NID": "4",
+        "NAME": "马卡鲁峰（海拔8463米）",
+        "图片": "4.jpg",
+        "lng": "87.0891180720001",
+        "lat": "27.8898562590001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [82.436747170000046, 30.602267485000027]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "NID": "5",
+        "NAME": "马攸木拉山（海拔5211米）",
+        "图片": "5.jpg",
+        "lng": "82.43674717",
+        "lat": "30.602267485"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [90.557718968000074, 28.419354957000053]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "NID": "6",
+        "NAME": "蒙达拉山口（海拔5363米）",
+        "图片": "6.jpg",
+        "lng": "90.5577189680001",
+        "lat": "28.4193549570001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [92.343150000000037, 29.827740000000063]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "NID": "7",
+        "NAME": "米拉山口（海拔5013米）",
+        "图片": "7.jpg",
+        "lng": "92.34315",
+        "lat": "29.8277400000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [91.097069655000041, 30.681664500000068]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "NID": "8",
+        "NAME": "那根拉（海拔5190米）",
+        "图片": "8.jpg",
+        "lng": "91.097069655",
+        "lat": "30.6816645000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.055013320000057, 29.631075940000073]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "NID": "9",
+        "NAME": "南迦巴瓦峰（海拔7782米）",
+        "图片": "9.jpg",
+        "lng": "95.0550133200001",
+        "lat": "29.6310759400001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [94.928435100000058, 29.585928730000035]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "NID": "10",
+        "NAME": "南迦巴瓦峰观景台（海拔7782米）",
+        "图片": "10.jpg",
+        "lng": "94.9284351000001",
+        "lat": "29.58592873"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [90.234260655000071, 30.198983390000024]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "NID": "11",
+        "NAME": "念青唐古拉山（海拔7162米）",
+        "图片": "11.jpg",
+        "lng": "90.2342606550001",
+        "lat": "30.19898339"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [89.059577005000051, 33.977041315000065]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "NID": "14",
+        "NAME": "普若岗日冰川（海拔6460米）",
+        "图片": "14.jpg",
+        "lng": "89.0595770050001",
+        "lat": "33.9770413150001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [94.651648482000041, 29.610687088000077]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "NID": "15",
+        "NAME": "色季拉山口（海拔4720米）",
+        "图片": "15.jpg",
+        "lng": "94.651648482",
+        "lat": "29.6106870880001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [90.625195718000043, 29.230093931000056]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "NID": "16",
+        "NAME": "雅江河谷观景台（海拔4280米）",
+        "图片": "16.jpg",
+        "lng": "90.625195718",
+        "lat": "29.2300939310001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [90.616415535000044, 29.194676899000058]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "NID": "18",
+        "NAME": "羊卓雍措-岗巴拉山口（海拔4998米）",
+        "图片": "18.jpg",
+        "lng": "90.616415535",
+        "lat": "29.1946768990001"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [97.310243121000042, 30.156034930000033]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "NID": "19",
+        "NAME": "业拉山口（海拔4658米）",
+        "图片": "19.jpg",
+        "lng": "97.310243121",
+        "lat": "30.15603493"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.851020000000062, 28.141150000000039]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "NID": "21",
+        "NAME": "珠峰大本营（海拔5200米）",
+        "图片": "21.jpg",
+        "lng": "86.8510200000001",
+        "lat": "28.14115"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.925174715000082, 27.987983415000031]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "NID": "22",
+        "NAME": "珠穆朗玛峰（海拔8844.43米）",
+        "图片": "22.jpg",
+        "lng": "86.9251747150001",
+        "lat": "27.987983415"
+      }
+    }
+  ]
+}
