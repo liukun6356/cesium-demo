@@ -1,0 +1,1677 @@
+/*********垂直滚动条样式 start***********/
+.vertical_scroll_bar::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 5px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+  
+  .vertical_scroll_bar::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #9ac2ff;
+    /*rgba(32, 127, 255, 0.7);*/
+  }
+  
+  .vertical_scroll_bar::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #fff;
+  }
+  
+  /*********垂直滚动条样式 end***********/
+  /* -----------面板底部 绿草样式--------- */
+  .panelBottomBgImage {
+    position: absolute;
+    bottom: 0px;
+    border-radius: 4px;
+    background-image: url(../image/yuanlin/common_use/panelBottom.png);
+    background-size: 100% 100%;
+    height: 90px;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  /* ----------------- */
+  .topOther {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 1vh 0vw;
+    width: 460px;
+  }
+  
+  .topSearchItem {
+    position: relative;
+    width: 240px;
+  }
+  
+  .searchImg:hover {
+    background: url(../image/yuanlin/layer_manage/搜索悬停.png);
+  }
+  
+  .searchImg {
+    background: url(../image/yuanlin/layer_manage/搜索默认.png);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  input.searchInput {
+    border: 0px;
+    background-color: #f0f8ff00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px);
+    height: 24px;
+    border-radius: 5px;
+    color: #cfcfcf;
+    padding-right: 26px;
+  }
+  
+  /*自定义输入框中默认输入框样式*/
+  input.searchInput::-webkit-input-placeholder {
+    /* color: rgba(58, 213, 255, .6); */
+    color: hsl(0 0% 100% / 0.7);
+  }
+  
+  .topSearchBar {
+    position: relative;
+    background-color: rgb(13 101 65 / 70%);
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  
+  .topAdminItem {
+    position: relative;
+    width: 140px;
+    height: 30px;
+  }
+  
+  .topAdminBar {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .topAdminIcon {
+    width: 18px;
+    height: 18px;
+    background: url(../image/yuanlin/common_use/user.png);
+    /* cursor: pointer; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* opacity: 0.8; */
+  }
+  
+  .topAdminIcon:hover {
+    opacity: 1;
+  }
+  
+  .topAdminName {
+    position: absolute;
+    left: 25px;
+    width: calc(100% - 25px);
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  
+  .topBackServerBar {
+    position: relative;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .topBackServerIcon {
+    width: 18px;
+    height: 18px;
+    background: url(../image/yuanlin/common_use/server.png);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+  }
+  
+  .topBackServerIcon:hover {
+    opacity: 1;
+  }
+  
+  .topExitBar {
+    position: relative;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .topExitIcon {
+    width: 18px;
+    height: 18px;
+    background: url(../image/yuanlin/common_use/exit.png);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+  }
+  
+  .topExitIcon:hover {
+    opacity: 1;
+  }
+  
+  .topBarSide {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    background-color: #a1a1a1;
+    height: 10px;
+  }
+  
+  .rightBottomBar {
+    position: fixed;
+    display: flex;
+    bottom: 30px;
+    right: 10px;
+    height: 40px;
+    background: rgb(1 17 9 / 70%);
+    border-radius: 4px;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .RB_toolbar_item {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .M_length {
+    background: url(../image/yuanlin/toolbar/default/长度.png);
+  }
+  
+  .M_height {
+    background: url(../image/yuanlin/toolbar/default/高度.png);
+  }
+  
+  .M_area {
+    background: url(../image/yuanlin/toolbar/default/面积.png);
+  }
+  
+  .M_clear {
+    background: url(../image/yuanlin/toolbar/default/清除.png);
+  }
+  
+  .C_north {
+    background: url(../image/yuanlin/toolbar/default/指北.png);
+  }
+  
+  .C_aerialView {
+    background: url(../image/yuanlin/toolbar/default/鸟瞰.png);
+  }
+  
+  .C_Full {
+    background: url(../image/yuanlin/toolbar/default/全屏.png);
+  }
+  
+  .C_reset {
+    background: url(../image/yuanlin/toolbar/default/复位.png);
+  }
+  
+  .M_length:hover {
+    background: url(../image/yuanlin/toolbar/selected/长度.png);
+  }
+  
+  .M_height:hover {
+    background: url(../image/yuanlin/toolbar/selected/高度.png);
+  }
+  
+  .M_area:hover {
+    background: url(../image/yuanlin/toolbar/selected/面积.png);
+  }
+  
+  .M_clear:hover {
+    background: url(../image/yuanlin/toolbar/selected/清除.png);
+  }
+  
+  .C_north:hover {
+    background: url(../image/yuanlin/toolbar/selected/指北.png);
+  }
+  
+  .C_aerialView:hover {
+    background: url(../image/yuanlin/toolbar/selected/鸟瞰.png);
+  }
+  
+  .C_Full:hover {
+    background: url(../image/yuanlin/toolbar/selected/全屏.png);
+  }
+  
+  .C_reset:hover {
+    background: url(../image/yuanlin/toolbar/selected/复位.png);
+  }
+  
+  /* ------------------ */
+  
+  /**图例样式start*/
+  .legend_panel {
+    position: fixed;
+    width: 130px;
+    height: 190px;
+    background-color: aliceblue;
+    z-index: 1;
+    bottom: 2.6vh;
+    right: 7vw;
+    background: rgba(42, 44, 64, 0.7);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .legend_panel_item {
+    color: white;
+    margin-top: 20px;
+    height: 25px;
+  }
+  
+  .legend_panel_item_color {
+    width: 35px;
+    height: 15px;
+    background-color: #ff0000;
+    float: left;
+    border-radius: 5px;
+  }
+  
+  .legend_panel_item_name {
+    float: left;
+    line-height: 15px;
+    width: 70px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+  
+  /**图例样式end*/
+  
+  /* 顶部菜单 修改菜单高度 --start--*/
+  .topBar {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    position: fixed;
+    z-index: 10;
+    background: rgba(42, 44, 64, 0.8);
+    height: 5.5vh;
+  }
+  
+  /* 修改顶部菜单高度 */
+  .layui-nav .layui-nav-item {
+    line-height: 5.5vh;
+    min-width: 150px;
+  }
+  
+  .layui-nav .layui-nav-item a {
+    text-align: center;
+  }
+  
+  .layui-nav-child {
+    top: 5.5vh;
+  }
+  
+  /* 顶部菜单 修改菜单高度 --end--*/
+  
+  /* 修改顶部菜单字体大小 */
+  .layui-nav-item a {
+    font-size: 2vh;
+  }
+  
+  /* 修改菜单居右 */
+  .layui-nav {
+    /* position: absolute; */
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0) !important;
+    right: 1vw;
+    padding: 0;
+  }
+  
+  /* 标题 logo ---start---*/
+  img.logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 2.2vw;
+  }
+  
+  .topBar .title {
+    color: #fafdfd;
+    /* font-weight: 600; */
+    font-size: 26px;
+    font-family: webfont;
+    line-height: 5.5vh;
+    margin-left: 60px;
+  }
+  
+  /* 菜单 一级文字样式 */
+  .mainMenu {
+    font-family: 思源黑体;
+  }
+  
+  /* 标题logo ---end---*/
+  /* 其他全屏内容界面面板  --start-- */
+  .contentPageBackground {
+    position: fixed;
+    z-index: 2;
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .contentPage {
+    margin-top: 5.5vh;
+    width: 100%;
+    height: calc(100% - 5.5vh);
+  }
+  
+  .contentPageItem {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+  }
+  
+  .contentPageItem_closeBnt {
+    top: 53px;
+    right: 1px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    background-color: aliceblue;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 20px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  .contentPageItem_closeBnt:hover {
+    color: #03a9f4;
+    font-size: 23px;
+  }
+  
+  /* 其他全屏内容界面面板  --end-- */
+  /* 地灾点查询条件区域样式--start-- */
+  .mapSearch {
+    display: inline;
+    position: absolute;
+    left: 200px;
+    cursor: pointer;
+    font-weight: bolder;
+    top: 0px;
+  }
+  
+  .mapSearch:hover {
+    color: #03a9f4;
+  }
+  
+  /* 地灾点查询条件区域样式--start-- */
+  
+  /* 统计页面 统计按钮 s*/
+  .statisticsBnt {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    width: 65px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border: 1px solid rgba(195, 195, 195, 0.6);
+    border-radius: 5px;
+    text-align: center;
+    color: #6b6a6a;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+  }
+  
+  .statisticsBnt:hover {
+    background-color: rgba(3, 169, 244, 0.56);
+    color: #fff;
+  }
+  
+  /* 统计页面 统计按钮 e*/
+  
+  /*自动漫游*/
+  .rightContentPanel {
+    position: fixed;
+    z-index: 1;
+    width: 350px;
+    height: calc(100% - 5.5vh - 20px - 21px - 45px);
+    top: calc(5.5vh + 10px);
+    right: 10px;
+    background-color: rgb(1 17 9 / 80%);
+    border: 1px solid #0c714d;
+    border-radius: 4px;
+    display: none;
+  }
+  
+  .rightContentPanel .layui-card {
+    height: 100%;
+    color: #ccc;
+    border-radius: 5px !important;
+    background: rgba(42, 44, 64, 0);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 0px;
+    /* background-image: url(../image/float_bg.png);
+    background-position: left bottom; */
+  }
+  
+  .rightContentPanel .layui-card-header {
+    font-family: "思源黑体";
+    border-bottom-color: #0c714d;
+  }
+  
+  .layui-tab-title {
+    font-family: "思源黑体";
+    border-bottom-color: rgb(255 255 255 / 40%);
+  }
+  
+  /* .layui-card-header {
+      border-bottom: 1px solid #98940e;
+      color: #fff;
+  } */
+  
+  .layui_btn_group {
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .layui_btn_group_left {
+    border-radius: 5px 0px 0px 5px;
+    width: 50%;
+  }
+  
+  .layui_btn_group_right {
+    border-radius: 0px 5px 5px 0px;
+    width: 50%;
+  }
+  
+  .m_background_bottom_right {}
+  
+  .videoPlayerIcons {
+    margin: 8px 4px 0px 4px;
+    cursor: pointer;
+  }
+  
+  .videoPlayerIcons:hover {
+    color: #0088ff;
+  }
+  
+  .videoPlayerIconsDiv {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 70px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: rgba(57, 61, 73, 0.4);
+    box-shadow: 0 0 10px 1px rgb(183, 183, 183);
+    line-height: 30px;
+  }
+  
+  /*自动漫游end*/
+  
+  /*滚动条样式*/
+  .vertical_scroll_bar::-webkit-scrollbar {
+    width: 4px;
+    height: 1px;
+  }
+  
+  .vertical_scroll_bar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 140, 255, 0.8); */
+    background: rgb(0 255 154 / 40%);
+  }
+  
+  .vertical_scroll_bar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    /* background: rgba(243, 243, 243, 0.7); */
+    background: rgb(13 101 65 / 50%);
+  }
+  
+  /*滚动条样式_end*/
+  
+  /*工具 图片按钮样式*/
+  .imgBntDiv {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 10px;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #4487c14a;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.8);
+  }
+  
+  img.imgBntDiv_img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 111;
+  }
+  
+  .imgBntDiv:hover {
+    background-color: rgba(0, 33, 247, 0.5);
+  }
+  
+  .imgBntDiv_clear {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 10px;
+    float: right;
+    position: relative;
+    margin-left: 10px;
+    background-color: rgba(255, 193, 7, 0.58);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.8);
+  }
+  
+  .imgBntDiv_clear:hover {
+    background-color: rgba(0, 33, 247, 0.5);
+  }
+  
+  /*工具 图片按钮样式*/
+  /* 统计页面 统计按钮 e*/
+  /* 统计页面 统计按钮 e*/
+  
+  /* 统计页面  类型选择按钮 s */
+  .statisticsDisasterTypeBnt {
+    float: left;
+    width: 80px;
+    padding: 0px 15px;
+    margin-top: 6px;
+    margin-left: 20px;
+    line-height: 30px;
+    font-size: 15px;
+    border: 1px solid rgba(195, 195, 195, 0.6);
+    border-radius: 5px;
+    text-align: center;
+    color: #6b6a6a;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .statisticsDisasterTypeBnt:hover {
+    background-color: rgba(3, 169, 244, 0.56);
+    color: #fff;
+  }
+  
+  /* 选中添加class样式 */
+  .statisticsDisasterTypeBnt_select {
+    background-color: rgba(3, 169, 244, 0.56);
+    color: #fff;
+    border-color: #03a9f4;
+  }
+  
+  /* 统计页面  类型选择按钮 e */
+  
+  /* 数据上报信息弹窗样式 s */
+  .dataReportClose {
+    position: absolute;
+    top: -14px;
+    right: -8px;
+    background-color: #ffffff;
+    border: 4px solid #90b6ef;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .dataReportClose:hover {
+    color: #90b6ef;
+    font-size: 20px;
+  }
+  
+  .dataReportPanel {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    background-color: #90b6ef;
+    border-radius: 5px;
+    width: 400px;
+    z-index: 100;
+    padding: 5px;
+  }
+  
+  .dataReportContent {
+    height: 350px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  /* 数据上报信息弹窗样式 e */
+  /**单体化添加属性面板样式==start**/
+  .model_addSingle {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .model_addSingle .panel_addSingle {
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border-image: url(./image/BG1.png) 406 160 30 160 fill / 406px 190px 35px 190px / 0px 0px 0px 0px stretch; */
+    /* border-radius: 4px; */
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .model_addSingle .panel_addSingle .addSingleRow {
+    margin-top: 10px;
+    font-size: medium;
+  }
+  
+  .model_addSingle .panel_addSingle .addsingletable th {
+    text-align: center;
+    width: 33%;
+    border: 1px solid rgb(32, 127, 255);
+    color: #fff;
+  }
+  
+  .model_addSingle .panel_addSingle .addsingletable td {
+    text-align: center;
+    width: 33%;
+    border: 1px solid rgb(32, 127, 255);
+    color: white;
+  }
+  
+  .model_addSingle .panel_addSingle .addsingletable td input {
+    width: 85px;
+    background: #f0f8ff00;
+    border: 0px;
+    color: #fff;
+  }
+  
+  .model_addSingle .panel_addSingle .singlePolygonColor {
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    background: #fff0;
+    border: 0px;
+    margin-left: 20px;
+  }
+  
+  /**单体化添加属性面板样式==end**/
+  
+  /**标注编辑面板相关样式start**/
+  .editDiv_tableDiv {
+    height: 250px;
+    border-radius: 5px;
+    background: #00000029;
+    box-shadow: 0 0 10px 1px rgb(183, 183, 183);
+    overflow-y: auto;
+  }
+  
+  .addBnt {
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+    background: #00000029;
+    box-shadow: 0 0 10px 1px rgb(183, 183, 183);
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .addBnt:hover {
+    color: #ffc107;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.77);
+    background: #005aff45;
+  }
+  
+  .addBnt_ed {
+    background-color: rgba(0, 255, 26, 0.22);
+  }
+  
+  .editDiv_tableDiv table td {
+    border: 1px solid rgb(32, 127, 255);
+  }
+  
+  .tableTrtd_delete {
+    cursor: pointer;
+  }
+  
+  .tableTrtd_delete:hover {
+    color: #03a9f4;
+  }
+  
+  /**标注编辑面板相关样式end**/
+  .compass {
+    position: absolute;
+    top: 60px;
+    right: 2px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    pointer-events: auto;
+    opacity: 0.5;
+  }
+  
+  /* 数据上报信息弹窗样式 e */
+  /* 数据上报信息弹窗样式 e */
+  
+  /* 左侧弹窗 专业监测 s*/
+  .leftContentPanel {
+    left: 10px;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    width: 350px;
+    height: calc(100% - 5.5vh - 20px - 21px);
+    top: calc(5.5vh + 10px);
+  }
+  
+  .leftContentPanel .layui-card {
+    height: 100%;
+    color: #ccc;
+    border-radius: 5px !important;
+    background: rgba(42, 44, 64, 0);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 0px;
+  }
+  
+  .leftContentPanel .layui-card-header {
+    font-family: "思源黑体";
+    border-bottom-color: #0c714d;
+  }
+  
+  /* 左侧弹窗 专业监测 s*/
+  /* 专业监测 - 传感器信息数据面板 s */
+  .zyjc_cgq_panel_closeBnt {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    background-color: aliceblue;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 20px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  
+  .zyjc_cgq_panel_closeBnt:hover {
+    color: #03a9f4;
+    font-size: 23px;
+  }
+  
+  .arrowDown {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #03a9f4;
+  }
+  
+  .arrowUp {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    color: #f44336;
+  }
+  
+  .circleRed {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f44336;
+  }
+  
+  .circleGreen {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(134, 241, 53);
+  }
+  
+  .zyjc_cgq_panel {
+    /* 
+       position: fixed;
+       z-index: 2;
+       top: 50%;
+       left: 50%;
+       width: 800px;
+       height: 700px;
+       background-color: #eee;
+       transform: translate(-50%, -50%);
+       border-radius: 5px;
+       box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25); 
+       */
+  
+    left: calc(350px + 15px);
+    display: block;
+    position: fixed;
+    z-index: 1;
+    height: 700px;
+    width: 580px;
+    top: calc(5.5vh + 10px);
+    transform: translate(0%, 0%);
+    background-color: #eee0;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .zyjc_cgq_panel .layui-card.zyjc_cgq_panel_card {
+    height: 100%;
+    color: #ccc;
+    border-radius: 5px !important;
+    background: rgb(255 255 255);
+    /* background: rgba(42, 44, 64, 0.8); */
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 0px;
+  }
+  
+  .zyjc_cgq_panel_card {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .zyjc_cgq_panel_card_body {
+    height: calc(100% - 43px - 10px);
+    background-color: #efefef;
+    border-radius: 0px 0px 5px 5px;
+  }
+  
+  .zyjc_cgq_panel .layui-card-body {
+    padding: 5px 5px;
+  }
+  
+  .zyjc_cgq_panel_card_body_tableDiv {
+    height: 250px;
+    overflow: auto;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+  }
+  
+  /* 专业监测 - 传感器信息数据面板 e */
+  /* 左侧弹窗 专业监测 s*/
+  /* 左侧弹窗 专业监测 s*/
+  
+  .eidtLayer.layui-card {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0px;
+  }
+  
+  .ztree li a {
+    padding-right: 3px;
+    margin: 0;
+    cursor: pointer;
+    height: 21px;
+    color: #333;
+    background-color: transparent;
+    text-decoration: none;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 5px;
+    /* width: calc(100% - 18px - 25px); */
+    width: calc(100% - 18px - 25px - 65px);
+  }
+  
+  /* #linkManage_Left_ztree_3dlayer .ztree li a:hover {
+    background-color: #e5e5e500;
+    border-radius: 5px;
+  } */
+  
+  .ztree li a:hover {
+    background-color: #e5e5e54d;
+    border-radius: 5px;
+  }
+  
+  i.diyBtn:hover {
+    color: #ffffff;
+    background-color: #00b0ff;
+  }
+  
+  i.diyBtn {
+    margin-left: 10px;
+    float: right;
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    color: #03a9f4;
+    font-weight: 600;
+    text-align: center;
+    line-height: 21px;
+  }
+  
+  #pupup-all-view .cesium-popup-close-button {
+    font-size: 25px;
+    color: white;
+    text-decoration: none !important;
+    right: 4px;
+  }
+  
+  /* 黑色半透明半径下 div按钮样式 s */
+  .shadowBnt {
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .shadowBnt:hover {
+    background-color: rgba(240, 248, 255, 0.4);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 1);
+    color: white;
+  }
+  
+  /* 黑色半透明半径下 div按钮样式 e*/
+  .manageTable>.layui-tab-title .layui-this {
+    background-color: #009688;
+    color: white;
+  }
+  
+  /*左边弹窗-地灾治理-土地规划方案 面板中 各个控件的样式 s*/
+  .leftContentPanel_dzzl_tdghfa .layui-form-pane .layui-form-radio {
+    margin: 0px;
+    padding-right: 2px;
+  }
+  
+  .leftContentPanel_dzzl_tdghfa .layui-unselect.layui-form-radio .layui-icon {
+    font-size: 20px;
+  }
+  
+  .leftContentPanel_dzzl_tdghfa .layui-unselect.layui-form-radio div {
+    font-size: 12px;
+  }
+  
+  .labelBnt {
+    margin-bottom: 0px;
+    width: 80px;
+    text-align: center;
+    float: right;
+    display: inline-block;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    /* background-color: #f0f8ff30; */
+  }
+  
+  .labelBnt:hover {
+    background-color: rgba(240, 248, 255, 0.4);
+    color: white;
+  }
+  
+  .item_fanan {
+    height: 60px;
+    position: relative;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .item_fanan:hover {
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+  }
+  
+  .item_fanan_load {
+    box-shadow: 0px 0px 5px 2px rgba(95, 184, 120, 0.8);
+  }
+  
+  .item_faan_op {
+    float: right;
+    margin-right: 10px;
+    font-size: 22px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  
+  .item_faan_op:hover {
+    color: #5fb878;
+  }
+  
+  .item_faan_imgDiv {
+    position: absolute;
+    left: 0px;
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .item_faan_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+  }
+  
+  .item_faan_textDiv {
+    position: absolute;
+    right: 0px;
+    width: calc(100% - 60px);
+    height: 100%;
+  }
+  
+  /* 编辑gltf 属性面板 关闭按钮 */
+  .gltf_edit_panel_close {
+    position: absolute;
+    top: -27px;
+    right: -11px;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(42, 44, 64, 1);
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    font-size: 15px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    color: #ccc;
+    border: 1px solid rgb(125, 121, 121);
+  }
+  
+  .gltf_edit_panel_close:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /*左边弹窗-地灾治理-土地规划方案 面板中 各个控件的样式 e*/
+  
+  /*  rightBarBig 查询或显示灾害点后的 右边工具菜单 s */
+  .rightBarBig {
+    position: fixed;
+    right: 0.2vw;
+    bottom: 4.5vh;
+    width: 6vw;
+    height: calc(100% - 10vh);
+    color: #fff;
+  }
+  
+  .rightBarBig_item {
+    height: 13.5vh;
+    background: rgba(42, 44, 64, 0.8);
+    margin-top: 3px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 12px;
+  }
+  
+  .rightBarBig_item_bnt {
+    height: 9vh;
+    cursor: pointer;
+  }
+  
+  img.rightBarBig_item_bnt_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .textCenter {
+    float: right;
+    width: 60%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+  }
+  
+  span.font24 {
+    font-size: 24px;
+  }
+  
+  .rightBarBig_item_bnt_img_div {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .textCenterDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .rightBarBig_item_sise_polygon {
+    float: left;
+    width: 50%;
+    height: 4vh;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .rightBarBig_item_sise_polyline {
+    width: 50%;
+    height: 4vh;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .rightBarBig_item_sise {
+    height: 4.5vh;
+    position: relative;
+  }
+  
+  .rightBarBig_item_sise_line {
+    height: 2px;
+    width: calc(100% - 20px);
+    background: #ccc;
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .rightBarBig_item_sise_line_vertical {
+    width: 2px;
+    height: calc(100% - 10px);
+    background: #ccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  img.rightBarBig_item_sise_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+  }
+  
+  .rightBarBig_item_bnt:hover,
+  .rightBarBig_item_sise_polygon:hover,
+  .rightBarBig_item_sise_polyline:hover {
+    background: #03a9f49e;
+  }
+  
+  .rightBarBig_item_bnt_selected {
+    background: #03a9f49e;
+  }
+  
+  /*  rightBarBig 查询或显示灾害点后的 右边工具菜单 e */
+  
+  /* 左边弹窗-地灾点图上查询 leftContentPanel_dzdMapQurey  s*/
+  input.disasterTypeInput {
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-bottom: 1px;
+    margin-right: 3px;
+  }
+  
+  label.disasterTypeLabel {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  input.disasterlevel {
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-bottom: 1px;
+    margin-right: 3px;
+  }
+  
+  label.disasterlevelLabel {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* 左边弹窗-地灾点图上查询 leftContentPanel_dzdMapQurey  e*/
+  
+  /* <!-- 添加地灾点后信息录入提示面板 --> s*/
+  /* 关闭按钮 */
+  .disasterAddDrawEndClose {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .disasterAddDrawEndClose:hover {
+    color: #00bcd4;
+  }
+  
+  /* <!-- 添加地灾点后信息录入提示面板 --> e*/
+  .shadowBnt:hover {
+    background-color: rgba(240, 248, 255, 0.4);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 1);
+    color: white;
+  }
+  
+  /* 黑色半透明半径下 div按钮样式 e*/
+  .manageTable>.layui-tab-title .layui-this {
+    background-color: #009688;
+    color: white;
+  }
+  
+  .shadowBnt:hover {
+    background-color: rgba(240, 248, 255, 0.4);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 1);
+    color: white;
+  }
+  
+  /* 黑色半透明半径下 div按钮样式 e*/
+  .manageTable>.layui-tab-title .layui-this {
+    background-color: #009688;
+    color: white;
+  }
+  
+  .layui-table-view .layui-form-checkbox {
+    margin: 6px;
+  }
+  
+  .layui-form-switch {
+    margin: 0px;
+    margin-left: 10px;
+    width: 60px;
+  }
+  
+  /* 修改气泡样式开始 */
+  .das3d-popup-content-wrapper,
+  .das3d-popup-background {
+    background-color: rgb(1 17 9 / 0%) !important;
+    border: 1px solid #0c714d00 !important;
+  }
+  
+  .das3d-popup-tip,
+  .das3d-popup-background {
+    background-color: rgb(1 17 9 / 60%) !important;
+    border: 1px solid #0c714ea8 !important;
+  }
+  
+  .das3d-popup-content {
+    margin: 0;
+  }
+  
+  .das3d-popup-content-wrapper {
+    box-shadow: 0 3px 14px rgb(0 0 0 / 0%) !important;
+    padding: 0 !important;
+    max-height: 532px !important;
+  }
+  
+  .das3d-popup-close-button {
+    top: 10px !important;
+    right: 13px !important;
+    font-size: 24px !important;
+  }
+  
+  .das3d-popup-color {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  /* 古树古木详情 */
+  
+  .rightContentPanel_gsgmDetail {
+    left: 477px;
+    top: 130px !important;
+    font-family: "思源黑体" !important;
+  }
+  
+  .gsgm_line {
+    color: rgba(255, 255, 255, 0.836);
+    font-weight: 400;
+    position: absolute;
+    right: 42px;
+    top: -2px;
+  }
+  
+  .imageBox {
+    position: relative;
+    height: 100%;
+  }
+  
+  .gsgm_detail_attribute {
+    display: flex;
+    height: 45px;
+  }
+  
+  .gsgm_detail_attribute_left {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffffa6;
+    /* width: 85px; */
+    width: 160px;
+  }
+  
+  .gsgm_detail_attribute_right {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.911);
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .gsgm_detail_image {
+    margin-bottom: 10px;
+    width: 292px;
+    height: 345px;
+    border-radius: 4px;
+    background-color: rgb(21 21 21 / 77%);
+    border: 1px solid rgb(0 0 0 / 40%);
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .edit_image_see, .edit_three_see {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 20px;
+    background-color: #00000073;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ffffff82;
+    color: #ffffffb8;
+    cursor: pointer;
+  }
+  
+  .edit_image_see:hover, .edit_three_see:hover {
+    background-color: #0000009a;
+    border: 1px solid #00ff9994;
+  }
+  
+  .gsgm_detail_photo {
+    width: 100%;
+    height: 290px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+  }
+  
+  
+  .gsgm_detail_text {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    /* border-bottom: 1px solid #177445c4; */
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  
+  .gsgm_detail_present {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.897);
+    max-width: 159px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .gsgm_detail_time {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.705);
+  }
+  
+  .journalBox {
+    height: 100%;
+    position: relative;
+  }
+  
+  .rightContentPanel_gsgm table tr {
+    height: 45px;
+    border-bottom: 1px solid #177446a8;
+  }
+  
+  .allAreaStatisticResultPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1840px;
+    height: calc(100% - 150px);
+    background: rgba(1, 20, 13, 0.8);
+    border: 1px solid rgba(12, 113, 77, 1);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    display: none;
+    font-family: "思源黑体";
+  }
+  
+  .popupTitle {
+    background: rgba(6, 26, 17, 0.6);
+    font-size: 18px;
+    height: 58px;
+    line-height: 58px;
+    border-bottom: 1px solid rgba(12, 113, 77, 1);
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .layui-icon:hover {
+    color: #fff;
+  }
+  
+  .gsgm_detail_top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .threeBox {
+    height: 100%;
+    position: relative;
+  }
+  
+  .threeDimensionalBox {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  
+  .threeDimensionalBox iframe {
+    width: 100%;
+    height: 100%;
+    border: medium none;
+  }
+  
+  .my_popup .layui-tab-bar {
+    display: none;
+  }
+  
+  /* =====修改气泡样式开始===== */
+  
+  /* 滚动条样式 */
+  /* div滚动条样式 */
+  *::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 5px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    border-radius: 10px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 255, 154, 1);
+  }
+  
+  *::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .layui-tab-brief>.layui-tab-title .layui-this {
+    /* color: #00C8FF; */
+    color: #00ff9ab3;
+  }
+  
+  .rightContentPanel_gsgmDetail .layui-tab-title li {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    font-size: 14px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    position: relative;
+    line-height: 40px;
+    min-width: 95px;
+    padding: 0 15px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .rightContentPanel_gsgmDetail .layui-table {
+    width: 100%;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  
+  .rightContentPanel_gsgmDetail .layui-card-body .layui-table {
+    margin: 0;
+  }
+  
+  .rightContentPanel_gsgmDetail .layui-table tbody tr:hover,
+  .rightContentPanel_gsgmDetail .layui-table thead tr,
+  .rightContentPanel_gsgmDetail .layui-table-click,
+  .rightContentPanel_gsgmDetail .layui-table-header,
+  .rightContentPanel_gsgmDetail .layui-table-hover,
+  .rightContentPanel_gsgmDetail .layui-table-mend,
+  .rightContentPanel_gsgmDetail .layui-table-patch,
+  .rightContentPanel_gsgmDetail .layui-table-tool,
+  .rightContentPanel_gsgmDetail .layui-table-total,
+  .rightContentPanel_gsgmDetail .layui-table-total tr,
+  .rightContentPanel_gsgmDetail .layui-table[lay-even] tr:nth-child(even) {
+    background-color: transparent;
+  }
+  
+  .rightContentPanel_gsgmDetail .layui-table td,
+  .rightContentPanel_gsgmDetail .layui-table th {
+    text-align: center;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .rightContentPanel_gsgmDetail {
+    background-color: rgb(1 17 9 / 60%);
+  }
+  
+  .rightContentPanel_roam .layui-input, .layui-textarea {
+    padding-right: 10px;
+  }
+  
+  /* 场景导出弹框样式 */
+  /* .layui-layer {
+    background-color: rgb(1 17 9 / 80%);
+    border: 1px solid #0c714d;
+  }
+  
+  .layui-layer-title {
+    color: #f0f0f0f0;
+    font-size: 17px;
+    border-bottom: 1px solid #0c714d;
+  }
+  
+  .layui-layer-setwin a {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .layui-layer-setwin .layui-layer-close1 {
+    background-position: -149px -31px;
+  }
+  
+  .layui-layer-setwin {
+    top: 10px;
+  } */
