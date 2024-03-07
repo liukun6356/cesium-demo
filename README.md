@@ -1,13 +1,32 @@
-# demo
+## 柳晓黑胡椒 <img src="https://profile-avatar.csdnimg.cn/0b75e2e590014770956b95dd23ef9a41_hr_beginner.jpg!1" width="50" height="50" alt="描述图片的文字" style="position:relative;top:15px">
+https://blog.csdn.net/hr_beginner
+
+```javascript                                                                              
+  ,--,                                ,-.  
+,--.'|     ,--,                   ,--/ /|  
+|  | :   ,--.'|            ,--, ,--. :/ |  
+:  : '   |  |,           ,'_ /| :  : ' /   
+|  ' |   `--'_      .--. |  | : |  '  /    
+'  | |   ,' ,'|   ,'_ /| :  . | '  |  :    
+|  | :   '  | |   |  ' | |  . . |  |   \   
+'  : |__ |  | :   |  | ' |  | | '  : |. \  
+|  | '.'|'  : |__ :  | : ;  ; | |  | ' \ \ 
+;  :    ;|  | '.'|'  :  `--'   \'  : |--'  
+|  ,   / ;  :    ;:  ,      .-./;  |,'     
+ ---`-'  |  ,   /  `--`----'    '--'       
+          ---`-'                                                                
+```
+## cesium-demo 项目远程地址
+https://gfkd-dev.daspatial.com/
 
 ## Project setup
 ```
-yarn install
+yarn
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn dev
 ```
 
 ### Compiles and minifies for production
@@ -15,9 +34,3 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## 远程地址
-https://gitee.com/liuk14/cesium-demo
