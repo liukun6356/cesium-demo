@@ -19,21 +19,12 @@
 <script>
 import configJson from "/public/config/config.json";
 import configJs from "/public/config/config.js";
-import mapOperation from "@/components/mapOperation";
 // 组件内部对象
 
 export default {
   name: "CesiumMap",
   methods: {
     initMap() {
-      let self = this;
-      //地图底图
-      // const imageryProvider = das3d.layer.createImageryProvider({
-      //   type: "www_tdt",
-      //   layer: "img_d",
-      //   key: das3d.token.tiandituArr,
-      // });
-
       console.log("config.mapConfig :>> ", configJs.mapConfig.map3d);
       var createMapData = {
         id: "map-container",
@@ -97,7 +88,6 @@ export default {
           // _viewer.das.openFlyAnimation();
           // viewer 不存储在 data 中  只挂接到组件属性上 在组件内部使用
           window.dasViewer = _viewer;
-          console.log(window.dasViewer, 111)
           // 标绘类
           window.dasDrawControl = new das3d.Draw({
             viewer: _viewer,
@@ -127,33 +117,9 @@ export default {
           //   Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
           // );
 
-          const imageLayer = das3d.layer.createImageryProvider({
-            type: 'www_tdt',
-            layer: 'img_d',
-            key: [
-              // '2e5854ad8249b93d368997d7ad2ce491',
-              // '9f3fb7070696c453e7427a4844d279ae',
-              "902014349629fe7d6d4b5273211a2fd6",
-              // '5a78f8374d4a544954b345f49aa01d35',
-              // "8ab13fec4ee1fc4319a162fb7ac6c96b",
-              //   "09145765f8f076221e9f548983514fec"
-            ],
-          });
-          // const imageLayer = new Cesium.WebMapTileServiceImageryProvider({
-          //   url: "https://t7.tianditu.gov.cn/img_w/wmts?service=WMTS&version=1.0.0&tk=1a5973cbd371ba8fec73442bbde8b138",
-          //   layer: "ibo",
-          //   style: "default",
-          //   tileMatrixSetID: "w",
-          //   format: "tiles",
-          //   maximumLevel: 18,
-          //   subdomains: ['0', '1', '2', '3', '4', '5', '6', '7']
-          // })
-          const imageLayers = _viewer.imageryLayers.addImageryProvider(imageLayer);
-          imageLayers.mylayertype = 'tdt_online';
-
           let ImageryProvider = new Cesium.WebMapTileServiceImageryProvider({
-            url: 'http://{s}.tianditu.com/img_w/wmts?tk=902014349629fe7d6d4b5273211a2fd6&service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles',
-            layer: 'vec',
+            url: 'http://{s}.tianditu.com/img_w/wmts?tk=1a5973cbd371ba8fec73442bbde8b138&service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles',
+            layer: 'img_d',
             style: 'default',
             format: 'image/jpeg',
             tileMatrixSetID: 'GoogleMapsCompatible',
@@ -162,20 +128,18 @@ export default {
           });
           let ImageryProvider2 = new Cesium.WebMapTileServiceImageryProvider({
             url: 'http://t0.tianditu.com/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=902014349629fe7d6d4b5273211a2fd6',
-            layer: 'cva',
+            layer: 'img_z',
             style: 'default',
             format: 'image/jpeg',
             tileMatrixSetID: 'GoogleMapsCompatible',
             subdomains: ['t0', 't1', 't2', 't3', 't4', 't5', 't6', 't7'],
             maximumLevel: 18
           });
-          // _viewer.imageryLayers.addImageryProvider(ImageryProvider);
+          _viewer.imageryLayers.addImageryProvider(ImageryProvider);
           // _viewer.imageryLayers.addImageryProvider(ImageryProvider2);
         },
       };
       das3d.createMap(createMapData);
-
-      // mapOperation()
       // 方式三:与第三方SDK结合使用
       // let CesiumViewer = new Cesium.Viewer("canvas");
       // // 支持 config.json 所有参数
@@ -195,7 +159,6 @@ export default {
   },
   mounted() {
     this.initMap();
-
   },
 };
 </script>

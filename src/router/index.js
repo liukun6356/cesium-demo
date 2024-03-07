@@ -137,6 +137,11 @@ const routes = [
                 path: '/baseModel',
                 name: "baseModel",
                 component: () => import('@/components/three/baseModel/index.vue'),
+            },
+            {
+                path: '/modelRotation',
+                name: "modelRotation",
+                component: () => import('@/components/native/modelRotation/index.vue'),
             }
         ]
     }

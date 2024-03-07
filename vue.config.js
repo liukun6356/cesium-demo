@@ -2,7 +2,7 @@ const {defineConfig} = require('@vue/cli-service')
 module.exports = defineConfig({
     transpileDependencies: true,
     devServer: {
-        host: '127.0.0.1', //可以忽略不写
+        // host: '127.0.0.1', //可以忽略不写
         // host: '',
         port: 8081,//它是用来修改你打开后的端口号的
         open: true,//值为 true的话，项目启动时自动打开到浏览器里边， false不会打开
