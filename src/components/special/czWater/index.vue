@@ -25,6 +25,9 @@
         <map-scene v-if="rightTool2selectIndex === 2"/>
       </Transition>
     </div>
+    <!--    反遮罩-->
+    <Boundary v-if="boundaryShow"/>
+    <waterSurface />
   </div>
 </template>
 
@@ -39,12 +42,16 @@ import fz from '@/assets/img/czWater/仿真模拟.png'
 import dt from '@/assets/img/czWater/地图复位@2x.png'
 
 import MapScene from "./components/scene"
-import DataPanel3d from "./components/dataPanel3d"
+import DataPanel3d from "./components/dataPanel3d/index.vue"
+import Boundary from "./components/map/boundary.vue"
+import waterSurface from "./components/map/waterSurface.vue"
 
 export default {
   components: {
     MapScene,
     DataPanel3d,
+    Boundary,
+    waterSurface
   },
   data() {
     return {
@@ -61,7 +68,8 @@ export default {
         {label: '漫游', src: my},
         {label: '模拟', src: fz},
         {label: '全图', src: dt},
-      ]
+      ],
+      boundaryShow: false
     }
   },
   methods: {
@@ -83,13 +91,18 @@ export default {
           Cesium.MouseOperationController._rotationLock = false;
           break
       }
-    }
+    },
   },
-  mounted(){
+  mounted() {
     const viewer = window.dasViewer;
-    viewer.camera.setView({
-      destination: Cesium.Cartesian3.fromDegrees(113.25408,25.8061,36547.59),
+    let terrainProvider = new Cesium.CesiumTerrainProvider({
+      url: 'https://fm-chenzhou.daspatial.com/chenzhou/czservice/gisadmin-system/profile/chenzhouDem',
     });
+    this.boundaryShow = true
+
+    viewer.scene.globe.terrainProvider = terrainProvider;
+    // 打开深度监测
+    window.dasViewer.scene.globe.depthTestAgainstTerrain = true;
   }
 }
 </script>

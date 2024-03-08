@@ -213,7 +213,7 @@ export default [
             {
                 id: 71,
                 label: '中心城区5cm',
-                type: '3dtiles',
+                type: 'centralCity5cm',
                 url: 'https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B9' + '/new3dtiles/3dtiles/tileset.json',
                 flyTo: false,
                 offset: {

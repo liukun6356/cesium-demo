@@ -20,3 +20,13 @@ https://fm-nongken-dev.daspatial.com//geoserver/nongken/wms?service=WMS&version=
 https://fm-nongken-dev.daspatial.com//geoserver/nongken/wms?service=WMS&version=1.1.0
 https://fm-nongken-dev.daspatial.com//geoserver/gwc/service/wmts
 http://localhost:9003/model/tfVaynlDT/tileset.json
+
+czWater
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B9new3dtiles/3dtiles/tileset.json
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B9new3dtiles/SK/JY/tileset.json
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B9new3dtiles/SK/SQ/tileset.json
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B9new3dtiles/SK/XL/tileset.json
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B93dtiles/DT/WXH/3dt/tileset.json
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B93dtiles/DT/SXH/3dt/tileset.json
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B93dtiles/DT/SXQ/3dt/tileset.json
+https://das-future-map-1301434080.cos.ap-nanjing.myqcloud.com/%E9%83%B4%E5%B7%9E%E6%B0%B4%E7%AB%8B%E6%96%B93dtiles/DT/DJQ/3dt/tileset.json

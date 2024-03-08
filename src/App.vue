@@ -40,7 +40,7 @@ export default {
 |   :    /    \`----'    \`----'  |   :    :|'---'     :  ,      .-./|   :    :;  |,'    |   :  \\    \`----'   ---'    '---'     '   : |
  \\   \\ .'                        \\   \\  /             \`--\`----'     \\   \\  / '--'      |   | ,'                               ;   |,'
   \`---\`                           \`----'                             \`----'            \`----'                                 '---'
-%c %c \n%c 柳晓黑胡椒 %c demo `,
+%c %c \n%c 柳晓黑胡椒 %c gis-demo `,
         ` padding: 0px 0px;`,
         'color: #3eaf7c; font-size: 16px;margin-bottom: 10px;',
         'background: #35495e; padding: 4px; border-radius: 3px 0 0 3px; color: #fff',

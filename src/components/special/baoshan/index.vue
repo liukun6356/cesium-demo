@@ -47,7 +47,7 @@ export default {
       //   flyTo: true,
       // };
       // das3d.layer.createLayer(layerParam, window.dasViewer);
-      tileset = window.dasViewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+      const tileset = window.dasViewer.scene.primitives.add(new Cesium.Cesium3DTileset({
         url: process.env.VUE_APP_GIS_API + "/baoshan/3dtiles/tileset.json", //数据地址
         maximumScreenSpaceError: 10,  //最大的屏幕空间误差
         maximumNumberOfLoadedTiles: 512, //最大加载瓦片个数
