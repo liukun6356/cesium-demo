@@ -34,6 +34,7 @@ export default {
     const self = this
     viewer.clock.onTick.addEventListener(function (clock) {
       // 获取当前时间
+      // var time = clock.currentTime.secondsOfDay;
       self.hpr.heading += +0.01
       const position = Cesium.Cartesian3.fromDegrees(99.151194, 25.124811, 2000)
       const hpr = new Cesium.HeadingPitchRoll(self.hpr.heading, self.hpr.pitch, self.hpr.roll)
