@@ -118,7 +118,7 @@ export default {
           // );
 
           let ImageryProvider = new Cesium.WebMapTileServiceImageryProvider({
-            url: 'http://{s}.tianditu.com/img_w/wmts?tk=1a5973cbd371ba8fec73442bbde8b138&service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles',
+            url: 'http://{s}.tianditu.com/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk='+ process.env.VUE_APP_TDT_KEY,
             layer: 'img_d',
             style: 'default',
             format: 'image/jpeg',
