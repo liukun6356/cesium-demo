@@ -8,12 +8,13 @@ export default [
                 id: 11,
                 label: '天地图-影像底图',
                 type: 'img_d',
-                disabled: true
+                // disabled: true
             },
             {
                 id: 12,
                 label: '天地图-影像注记',
                 type: 'img_z',
+                // checked:true
             },
             {
                 id: 13,

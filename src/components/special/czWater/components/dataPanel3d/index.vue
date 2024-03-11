@@ -6,7 +6,7 @@
           ref="treeRef"
           :data="treeData"
           show-checkbox
-          @check-change="nodeCheck"
+          @check-change="checkChange"
           :default-expanded-keys="[1]"
           :default-checked-keys="[11]"
           node-key="id"/>
@@ -93,7 +93,7 @@ export default {
     EastStreetBridge3cm
   },
   methods: {
-    nodeCheck(node) {
+    checkChange(node) {
       if (!node.type) return
       if (this.$refs.treeRef.getCheckedNodes().find(item => item.type === node.type)) {
         this.$set(this.showTypeList, this.showTypeList.length, node.type)
@@ -105,8 +105,12 @@ export default {
   },
   mounted() {
     this.treeData = treeDataJson
+    setTimeout(()=>{
+      debugger
+      this.$refs.treeRef.setChecked([7],true)
+    },2000)
     // 设置默认选中  71,72,73,74,75,76
-    // this.$refs.treeRef.setCheckedKeys([7],true)
+
 
   }
 }

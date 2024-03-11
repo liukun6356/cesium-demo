@@ -17,7 +17,7 @@ https://blog.csdn.net/hr_beginner
           ---`-'                                                                
 ```
 ## cesium-demo 项目远程地址
-https://gfkd-dev.daspatial.com/
+http://gfkd-dev.daspatial.com/
 
 ## Project setup
 ```

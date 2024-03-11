@@ -25,11 +25,10 @@ export default {
       orientation,
       model: {
         uri: 'http://localhost:6060/modelView/model4.glb',
-        scale:4
+        scale: 4
       }
     });
     viewer.flyTo(modelRotationEntity);
-    console.log(modelRotationEntity)
     // 每一帧更新模型的姿态，实现旋转效果
     const self = this
     viewer.clock.onTick.addEventListener(function (clock) {

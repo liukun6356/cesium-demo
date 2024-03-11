@@ -27,7 +27,7 @@
     </div>
     <!--    反遮罩-->
     <Boundary v-if="boundaryShow"/>
-    <waterSurface />
+    <waterSurface/>
   </div>
 </template>
 
@@ -74,7 +74,19 @@ export default {
   },
   methods: {
     topToolSelectRightTool3D(item, index) {
-      this.rightTool2selectIndex = this.rightTool2selectIndex === index ? -1 : index
+      const viewer = window.dasViewer
+      switch (item.label) {
+        case '全图':
+          const flycenter = {"x": 113.214426, "y": 25.622073, "z": 480000, "heading": 357, "pitch": -86.9, "roll": 360};
+          viewer.camera.flyTo({
+            destination: Cesium.Cartesian3.fromDegrees(flycenter.x, flycenter.y, flycenter.z),
+            duration: 2
+          });
+          break
+        default:
+          this.rightTool2selectIndex = this.rightTool2selectIndex === index ? -1 : index
+          break
+      }
     },
     topToolActive(index) {
       this.isActive = index
