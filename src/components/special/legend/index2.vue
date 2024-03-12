@@ -125,12 +125,8 @@ export default {
     toggleFlat() {//切换列表
       this.isFlat = !this.isFlat;
     },
-    addBoundary() { // 添加遮罩层
-
-    },
     addPoint(item) {
       let viewer = window.dasViewer;
-      console.log(item.state, 111)
       let entity = dataSource.entities.add({
         id: item.id, // id
         name: item.name,//项目名称
@@ -163,14 +159,10 @@ export default {
         }
       });
       // 绑定外部非Draw产生的entity到标绘进行编辑
-      window.dasDrawControl.bindExtraEntity(entity)
-      window.setTimeout(()=>{
-        console.log(window.dasDrawControl.dataSource.entities.getById("1c2ad51c-4bd4-4c7e-9282-30e0c6b6642d"),911)
+      // window.dasDrawControl.bindExtraEntity(entity)
 
-      },2000)
-      console.log(window.dasDrawControl.dataSource.entities._entities._array, 22222111)
-      console.log(dataSource.entities, 2323232)
-      console.log(entity.position, 333, das3d.point.formatPosition(entity.position._value))
+      // console.log(window.dasDrawControl.dataSource.entities._entities._array, 22222111)
+      // console.log(entity.position, 333, das3d.point.formatPosition(entity.position._value))
       this.projEntitys.push(entity)
       entity.on(Cesium.Entity.event.click, function (e) {
         var entity = e.sourceTarget;
@@ -244,6 +236,22 @@ export default {
         this.addPoint(item)
       }
     },
+    clusteringPoint() {
+      // 链接:https://sandcastle.cesium.com/index.html?src=Clustering.html
+      dataSource.clustering.clusterEvent.addEventListener(function (clusteredEntities, cluster) {
+        cluster.label.show = false;
+        cluster.billboard.show = true;
+        // cluster.billboard.id = cluster.label.id;
+        cluster.billboard.scale = 0.5; //必须，解决数字文本锯齿
+        cluster.billboard.image = dataSource.clustering.getCircleImage(clusteredEntities.length); //getCircleImage方法未das3d扩展的
+
+      });
+      dataSource.clustering.pixelRange = 2; //多少像素矩形范围内聚合
+      dataSource.clustering.minimumClusterSize = 3;
+      dataSource.clustering.enabled = true;
+
+      // dataSource.cluster.billboard.scale = 0.5; //必须，解决数字文本锯齿
+    }
   },
 
   mounted() {
@@ -257,6 +265,8 @@ export default {
       "roll": 0
     });
     this.addProjBillboard()//添加项目图标点
+
+    this.clusteringPoint() // 添加点聚合
   }
 }
 </script>
