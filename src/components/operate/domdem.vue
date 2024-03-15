@@ -14,7 +14,6 @@ export default {
   },
   methods: {
     SingleTileImageryProvider() {
-
       const layer = window.dasViewer.scene.globe.imageryLayers.addImageryProvider(new Cesium.SingleTileImageryProvider({
         url: "./img/tietu/world1.jpg",
         rectangle: Cesium.Rectangle.fromDegrees(92.243522, 25.161497, 117.795788, 37.384786), // 西 南 东 北  四个方向的最大值
