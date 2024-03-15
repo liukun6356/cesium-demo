@@ -81,13 +81,51 @@ export default {
         const pitch = Cesium.Math.toRadians(90);
         const range = 5000.0;
         // 把相机中点设置为 模型 ，相机围绕着模型转
-        viewer.camera.lookAt( Cesium.Cartesian3.fromDegrees(99.151194, 25.124811, 2000),new Cesium.HeadingPitchRange(heading, pitch, range));
+        viewer.camera.lookAt(Cesium.Cartesian3.fromDegrees(99.151194, 25.124811, 2000), new Cesium.HeadingPitchRange(heading, pitch, range));
       })
+    },
+    addShaper() {
+      const viewer = window.dasViewer;
+      // 定义顶点着色器代码
+      var vertexShaderSource = `
+    attribute vec3 position;
+    void main() {
+        gl_Position = czm_modelViewProjection * vec4(position, 1.0);
+    }
+`;
+
+      // 定义片段着色器代码
+      var fragmentShaderSource = `
+    void main() {
+        gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); // 红色
+    }
+`;
+
+      // 创建着色器程序
+      var shaderProgram = new Cesium.ShaderProgram({
+        context: viewer.scene.context, // 获取场景的WebGL上下文
+        vertexShaderSource: vertexShaderSource, // 设置顶点着色器代码
+        fragmentShaderSource: fragmentShaderSource // 设置片段着色器代码
+      });
+
+      // 使用着色器程序绘制图形
+      shaderProgram.draw({
+        position: new Cesium.Cartesian3(99.151194, 25.124811, 2000) // 指定顶点的位置
+      });
+      viewer.camera.flyTo({
+        destination: Cesium.Cartesian3.fromDegrees(99.151697, 25.124711, 1984.73),
+        orientation: {
+          heading: Cesium.Math.toRadians(282.3),
+          pitch: Cesium.Math.toRadians(24.6),
+          roll: 0.0
+        }
+      });
     }
   },
   mounted() {
-    this.addModelRotation()
-    this.addRelativeModel()
+    // this.addModelRotation()
+    // this.addRelativeModel()
+    this.addShaper()
   },
 }
 </script>

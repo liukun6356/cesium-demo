@@ -26,7 +26,8 @@
     "@vue/cli-service": "~5.0.0",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "webpack-glsl-loader": "^1.0.1"
   },
   "browserslist": [
     "> 1%",

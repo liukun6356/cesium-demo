@@ -142,6 +142,11 @@ const routes = [
                 path: '/modelRotation',
                 name: "modelRotation",
                 component: () => import('@/components/native/modelRotation/index.vue'),
+            },
+            {
+                path: '/skyline',
+                name: "skyline",
+                component: () => import('@/components/native/skyline/index.vue'),
             }
         ]
     }

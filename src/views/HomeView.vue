@@ -19,6 +19,7 @@
     </ul>
     <ul class="list list2" v-if="$route.path === '/'">
       <li @click="$router.push('/modelRotation')">模型旋转</li>
+      <li @click="$router.push('/skyline')">天际线</li>
     </ul>
     <ul class="list list3" v-if="$route.path === '/'">
       <li @click="$router.push('/floorSuperposition')">楼层叠加</li>
