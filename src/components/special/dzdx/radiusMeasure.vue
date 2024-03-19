@@ -117,7 +117,6 @@ export default {
       return positions;
     },
     Cartesian3_to_WGS84(point) {// 三维坐标转经纬度坐标
-      debugger
       const cartesian33 = new Cesium.Cartesian3(point.x, point.y, point.z);
       const cartographic = Cesium.Cartographic.fromCartesian(cartesian33);
       const y = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6);
@@ -159,7 +158,6 @@ export default {
       self.$emit('submit', geometry)
       dasViewer.dataSources._dataSources.forEach(dataSource => {
         dataSource.entities._entities._array.forEach((entity) => {
-          debugger
           let entityPoint = entity.position && entity.position._value && this.Cartesian3_to_WGS84(entity.position._value)
           if (!entityPoint) return
           let isContains = turf.booleanPointInPolygon(turf.point([entityPoint.x, entityPoint.y]), turf.polygon([pos]))

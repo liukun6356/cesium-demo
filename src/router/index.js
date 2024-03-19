@@ -147,8 +147,19 @@ const routes = [
                 path: '/skyline',
                 name: "skyline",
                 component: () => import('@/components/native/skyline/index.vue'),
-            }
+            },
+            {
+                path: '/terrainClipPlan',
+                name: "terrainClipPlan",
+                component: () => import('@/components/native/terrainClipPlan/index.vue'),
+            },
+            {
+                path: '/terrainExcavationPullOut',
+                name: "terrainExcavationPullOut",
+                component: () => import('@/components/native/terrainExcavationPullOut/index.vue'),
+            },
         ]
+
     }
 ];
 
@@ -157,5 +168,13 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes
 });
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.length === 0) { // 如果未匹配到路由
+        next('/')
+    } else {
+        next() // 如果匹配到正确跳转
+    }
+})
 
 export default router;

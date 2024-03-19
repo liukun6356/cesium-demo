@@ -106,7 +106,6 @@ export default {
   mounted() {
     this.treeData = treeDataJson
     setTimeout(()=>{
-      debugger
       this.$refs.treeRef.setChecked([7],true)
     },2000)
     // 设置默认选中  71,72,73,74,75,76

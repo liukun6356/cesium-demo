@@ -97,7 +97,6 @@ export default {
     }
   },
   mounted() {
-    debugger
     let self = this
     setTimeout(() => {
       cctlLayer = new das3d.layer.createLayer(window.dasViewer, {

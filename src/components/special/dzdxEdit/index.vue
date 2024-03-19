@@ -180,7 +180,6 @@ export default {
     },
     nodeClickChange(data, checked) { // 树节点选中/取消
       data.visible = checked
-      debugger
       window.layerMethod.addOnLineLayer(data)
     },
     layerCheck(data) {

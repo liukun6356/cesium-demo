@@ -35,6 +35,9 @@ export default {
       }
     },
     addEntity() {
+      console.log(Cesium.Cartesian3.fromDegreesArray(
+          this.coordinates.flat()
+      ))
       for (let i = 1; i < 5; i++) { // 5层楼
         window.dasViewer.entities.add({
           customType: "aaa",
