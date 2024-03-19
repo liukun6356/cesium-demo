@@ -18,10 +18,9 @@ import {
   wallObj,
   landObj,
   rangeObj,
-  layerWork
 } from "./src/stageData"
 
-
+let layerWork
 export default {
   mounted() {
     //关闭深度检测
