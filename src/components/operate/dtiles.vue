@@ -378,7 +378,6 @@ export default {
       });
       // 图层加载完事件
       this.layerWork.on(das3d.layer.Tiles3dLayer.event.load, (e) => {
-        console.log(e, 1111);
         this.tileset = e.tileset;
         if (this.tileset.das.transform) {
           // 配置编辑器

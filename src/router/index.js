@@ -10,6 +10,7 @@ const routes = [
         name: 'home',
         component: HomeView,
         children: [
+            /* operate end */
             {
                 path: '/mapEffect',
                 name: "mapEffect",
@@ -59,6 +60,23 @@ const routes = [
                 component: () => import('@/components/operate/roaming.vue'),
             },
             {
+                path: '/splitScreen',
+                name: "splitScreen",
+                component: () => import('@/components/operate/splitScreen.vue'),
+            },
+            {
+                path: '/domdem',
+                name: "domdem",
+                component: () => import('@/components/operate/domdem.vue'),
+            },
+            {
+                path: '/primitive',
+                name: "primitive",
+                component: () => import('@/components/operate/primitive.vue'),
+            },
+            /* operate end */
+            /* special start */
+            {
                 path: '/floorSuperposition',
                 name: "floorSuperposition",
                 component: () => import('@/components/special/floorSuperposition.vue'),
@@ -104,21 +122,6 @@ const routes = [
                 component: () => import('@/components/special/yxRehearsal/index.vue'),
             },
             {
-                path: '/splitScreen',
-                name: "splitScreen",
-                component: () => import('@/components/operate/splitScreen.vue'),
-            },
-            {
-                path: '/domdem',
-                name: "domdem",
-                component: () => import('@/components/operate/domdem.vue'),
-            },
-            {
-                path: '/primitive',
-                name: "primitive",
-                component: () => import('@/components/operate/primitive.vue'),
-            },
-            {
                 path: '/taishi3dtiles',
                 name: "taishi3dtiles",
                 component: () => import('@/components/special/taishi3dtiles/index.vue'),
@@ -128,6 +131,8 @@ const routes = [
                 name: "czWater",
                 component: () => import('@/components/special/czWater/index.vue'),
             },
+            /* special end */
+            /* three start */
             {
                 path: '/ccThreed',
                 name: "ccThreed",
@@ -138,6 +143,8 @@ const routes = [
                 name: "baseModel",
                 component: () => import('@/components/three/baseModel/index.vue'),
             },
+            /* three end */
+            /* native start */
             {
                 path: '/modelRotation',
                 name: "modelRotation",
@@ -158,6 +165,29 @@ const routes = [
                 name: "terrainExcavationPullOut",
                 component: () => import('@/components/native/terrainExcavationPullOut/index.vue'),
             },
+            {
+                path: '/modelTree',
+                name: "modelTree",
+                component: () => import('@/components/native/modelTree/index.vue'),
+            },
+            /* native end */
+            /* webgl start */
+            {
+                path: '/canvas2d',
+                name: "canvas2d",
+                component: () => import('@/views/webgl/canvas2d.vue'),
+            },
+            {
+                path: '/helloCanvas',
+                name: "helloCanvas",
+                component: () => import('@/views/webgl/helloCanvas.vue'),
+            },
+            {
+                path: '/helloPoint',
+                name: "helloPoint",
+                component: () => import('@/views/webgl/helloPoint.vue'),
+            },
+            /* webgl end */
         ]
 
     }

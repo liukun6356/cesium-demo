@@ -22,6 +22,8 @@
       <li @click="$router.push('/skyline')">天际线</li>
       <li @click="$router.push('/terrainClipPlan')">挖方分析</li>
       <li @click="$router.push('/terrainExcavationPullOut')">地形开挖抽出显示</li>
+      <li @click="$router.push('/modelTree')">模型树</li>
+
     </ul>
     <ul class="list list3" v-if="$route.path === '/'">
       <li @click="$router.push('/floorSuperposition')">楼层叠加</li>
@@ -41,17 +43,8 @@
       <li @click="$router.push('/baseModel')">3d厂区</li>
     </ul>
     <div class="other-area" v-if="$route.path === '/'">
-      <el-select
-          v-model="webglValue"
-          placeholder="webgl学习"
-          size="large"
-      >
-        <el-option
-            v-for="item in webglOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value"
-        />
+      <el-select v-model="webglValue" placeholder="webgl" size="large" @change="webglChange">
+        <el-option v-for="item in webglOptions" :key="item" :label="item" :value="item"/>
       </el-select>
     </div>
   </div>
@@ -69,19 +62,23 @@ export default {
   data() {
     return {
       webglValue: '',
-      webglOptions: [
-        {
-          value: 'Option1',
-          label: 'Option1',
-        },
-        {
-          value: 'Option2',
-          label: 'Option2',
-        },
-      ]
+      webglOptions: ['canvas2d', 'helloCanvas', 'helloPoint']
     }
   },
-  methods: {}
+  methods: {
+    webglChange(v) {
+      switch (v) {
+        case 'canvas2d':
+          this.$router.push('/canvas2d')
+          break
+        case 'helloCanvas':
+          this.$router.push('/helloCanvas')
+          break
+        default:
+          this.$router.push('/' + v)
+      }
+    }
+  }
 };
 </script>
 

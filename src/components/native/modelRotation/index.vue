@@ -123,9 +123,9 @@ export default {
     }
   },
   mounted() {
-    // this.addModelRotation()
-    // this.addRelativeModel()
-    this.addShaper()
+    this.addModelRotation()
+    this.addRelativeModel()
+    // this.addShaper()
   },
 }
 </script>
