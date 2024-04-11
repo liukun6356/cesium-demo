@@ -72,7 +72,7 @@ export default {
       //构件节点位置
       const center = new Cesium.Cartesian3(sphere[0], sphere[1], sphere[2]);
       const boundingSphere = new Cesium.BoundingSphere(center, sphere[3]);
-
+      console.log(tileset,2222)
       // 飞行过去
       viewer.camera.flyToBoundingSphere(boundingSphere, {
         offset: new Cesium.HeadingPitchRange(
@@ -81,6 +81,7 @@ export default {
             sphere[3] * 1.5),// 目前的滚转角
         duration: 0.5
       })
+
       //设置tileset的样式
       tileset.style = new Cesium.Cesium3DTileStyle({
         color: {

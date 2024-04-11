@@ -1,0 +1,614 @@
+{
+    "language": "zh",
+    "exportPrecision": 6,
+    "autosave": false,
+    "project/title": "",
+    "project/editable": false,
+    "project/vr": false,
+    "project/renderer/antialias": true,
+    "project/renderer/shadows": true,
+    "project/renderer/shadowType": 3,
+    "project/renderer/physicallyCorrectLights": false,
+    "project/renderer/toneMapping": 4,
+    "project/renderer/toneMappingExposure": 1,
+    "settings/history": false,
+    "settings/shortcuts/translate": "w",
+    "settings/shortcuts/rotate": "e",
+    "settings/shortcuts/scale": "r",
+    "settings/shortcuts/undo": "z",
+    "settings/shortcuts/focus": "f",
+    "scene/background/env/maps": [
+        {
+            "id": "tiankonghe1",
+            "name": "黑灰渐变",
+            "url": "./images/tiankonghe3.jpg",
+            "hdr": [
+                "./images/tiankonghe1.hdr"
+            ]
+        },
+        {
+            "id": "tiankonghe2",
+            "name": "灰黑渐变",
+            "url": "./images/tiankonghe3.jpg",
+            "hdr": [
+                "./images/tiankonghe2.hdr"
+            ]
+        },
+        {
+            "id": "tiankonghe3",
+            "name": "灰白渐变",
+            "url": "./images/tiankonghe3.jpg",
+            "hdr": [
+                "./images/tiankonghe3.hdr"
+            ]
+        },
+        {
+            "id": "abandoned_slipway_1k_blur",
+            "name": "废弃码头",
+            "url": "./images/abandoned_slipway.jpg",
+            "hdr": [
+                "./images/abandoned_slipway_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "adams_place_bridge_1k_blur",
+            "name": "室内天桥",
+            "url": "./images/adams_place_bridge.jpg",
+            "hdr": [
+                "./images/adams_place_bridge_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "artist_workshop_1k_blur",
+            "name": "艺术工作室",
+            "url": "./images/artist_workshop.jpg",
+            "hdr": [
+                "./images/artist_workshop_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "bathroom_1k_blur",
+            "name": "浴室",
+            "url": "./images/bathroom.jpg",
+            "hdr": [
+                "./images/bathroom_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "cayley_interior_1k_blur",
+            "name": "会议室",
+            "url": "./images/cayley_interior.jpg",
+            "hdr": [
+                "./images/cayley_interior_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "christmas_photo_studio_04_1k_blur",
+            "name": "办公室1",
+            "url": "./images/christmas_photo_studio_04.jpg",
+            "hdr": [
+                "./images/christmas_photo_studio_04_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "Industrial_Room_1k_blur",
+            "name": "办公室2",
+            "url": "./images/Industrial_Room.jpg",
+            "hdr": [
+                "./images/Industrial_Room_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "peppermint_powerplant_1k_blur",
+            "name": "工厂内景",
+            "url": "./images/peppermint_powerplant.jpg",
+            "hdr": [
+                "./images/peppermint_powerplant_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "photo_studio_01_1k_blur",
+            "name": "工作室",
+            "url": "./images/photo_studio_01.jpg",
+            "hdr": [
+                "./images/photo_studio_01_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "studio_small_03_1k_blur",
+            "name": "摄影棚",
+            "url": "./images/studio_small_03.jpg",
+            "hdr": [
+                "./images/studio_small_03_1k_blur.hdr"
+            ]
+        },
+        {
+            "id": "neuer_zollhof_1k_blur",
+            "name": "广场夜景",
+            "url": "./images/neuer_zollhof.jpg",
+            "hdr": [
+                "./images/neuer_zollhof_1k_blur.hdr"
+            ]
+        }
+    ],
+    "scene/illumination/env/maps": [
+        {
+            "id": "office",
+            "name": "办公室",
+            "url": "./images/office.png",
+            "hdr": [
+                "./images/office.hdr"
+            ]
+        },
+        {
+            "id": "block_photo_studio",
+            "name": "块状照相馆",
+            "url": "./images/block_photo_studio.png",
+            "hdr": [
+                "./images/block_photo_studio.hdr"
+            ]
+        },
+        {
+            "id": "brown_photo_studio",
+            "name": "棕色照相馆",
+            "url": "./images/brown_photo_studio.png",
+            "hdr": [
+                "./images/brown_photo_studio.hdr"
+            ]
+        },
+        {
+            "id": "indoor/thumbnail",
+            "name": "室内",
+            "url": "./images/indoor/thumbnail.jpg",
+            "hdr": [
+                "./images/indoor/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "afternoon1/thumbnail",
+            "name": "室外正午",
+            "url": "./images/afternoon1/thumbnail.jpg",
+            "hdr": [
+                "./images/afternoon1/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "footprint/thumbnail",
+            "name": "傍晚",
+            "url": "./images/footprint/thumbnail.jpg",
+            "hdr": [
+                "./images/footprint/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "evening/thumbnail",
+            "name": "黄昏",
+            "url": "./images/evening/thumbnail.jpg",
+            "hdr": [
+                "./images/evening/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "Helipad/thumbnail",
+            "name": "直升机坪",
+            "url": "./images/Helipad/thumbnail.jpg",
+            "hdr": [
+                "./images/Helipad/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "10-Shiodome_Stairs_8k/thumbnail",
+            "name": "高楼",
+            "url": "./images/10-Shiodome_Stairs_8k/thumbnail.jpg",
+            "hdr": [
+                "./images/10-Shiodome_Stairs_8k/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "arches_pinetree/thumbnail",
+            "name": "岩石和古树",
+            "url": "./images/arches_pinetree/thumbnail.jpg",
+            "hdr": [
+                "./images/arches_pinetree/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "chimney/thumbnail",
+            "name": "夜晚水边",
+            "url": "./images/chimney/thumbnail.jpg",
+            "hdr": [
+                "./images/chimney/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "MeadowTrail/thumbnail",
+            "name": "草地步道",
+            "url": "./images/MeadowTrail/thumbnail.jpg",
+            "hdr": [
+                "./images/MeadowTrail/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "Mono_Lake_C/thumbnail",
+            "name": "莫诺湖",
+            "url": "./images/Mono_Lake_C/thumbnail.jpg",
+            "hdr": [
+                "./images/Mono_Lake_C/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "Newport_Loft/thumbnail",
+            "name": "纽波特阁楼",
+            "url": "./images/Newport_Loft/thumbnail.jpg",
+            "hdr": [
+                "./images/Newport_Loft/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "plaza/thumbnail",
+            "name": "露天广场",
+            "url": "./images/plaza/thumbnail.jpg",
+            "hdr": [
+                "./images/plaza/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "ruins/thumbnail",
+            "name": "古代废墟",
+            "url": "./images/ruins/thumbnail.jpg",
+            "hdr": [
+                "./images/ruins/thumbnail.hdr"
+            ]
+        },
+        {
+            "id": "abandoned_slipway_1k",
+            "name": "废弃码头",
+            "url": "./images/abandoned_slipway.jpg",
+            "hdr": [
+                "./images/abandoned_slipway_1k.hdr"
+            ]
+        },
+        {
+            "id": "adams_place_bridge_1k",
+            "name": "室内天桥",
+            "url": "./images/adams_place_bridge.jpg",
+            "hdr": [
+                "./images/adams_place_bridge_1k.hdr"
+            ]
+        },
+        {
+            "id": "artist_workshop_1k",
+            "name": "艺术工作室",
+            "url": "./images/artist_workshop.jpg",
+            "hdr": [
+                "./images/artist_workshop_1k.hdr"
+            ]
+        },
+        {
+            "id": "bathroom_1k",
+            "name": "浴室",
+            "url": "./images/bathroom.jpg",
+            "hdr": [
+                "./images/bathroom_1k.hdr"
+            ]
+        },
+        {
+            "id": "cayley_interior_1k",
+            "name": "会议室",
+            "url": "./images/cayley_interior.jpg",
+            "hdr": [
+                "./images/cayley_interior_1k.hdr"
+            ]
+        },
+        {
+            "id": "christmas_photo_studio_04_1k",
+            "name": "办公室1",
+            "url": "./images/christmas_photo_studio_04.jpg",
+            "hdr": [
+                "./images/christmas_photo_studio_04_1k.hdr"
+            ]
+        },
+        {
+            "id": "Industrial_Room_1k",
+            "name": "办公室2",
+            "url": "./images/Industrial_Room.jpg",
+            "hdr": [
+                "./images/Industrial_Room_1k.hdr"
+            ]
+        },
+        {
+            "id": "peppermint_powerplant_1k",
+            "name": "工厂内景",
+            "url": "./images/peppermint_powerplant.jpg",
+            "hdr": [
+                "./images/peppermint_powerplant_1k.hdr"
+            ]
+        },
+        {
+            "id": "photo_studio_01_1k",
+            "name": "工作室",
+            "url": "./images/photo_studio_01.jpg",
+            "hdr": [
+                "./images/photo_studio_01_1k.hdr"
+            ]
+        },
+        {
+            "id": "studio_small_03_1k",
+            "name": "摄影棚",
+            "url": "./images/studio_small_03.jpg",
+            "hdr": [
+                "./images/studio_small_03_1k.hdr"
+            ]
+        },
+        {
+            "id": "neuer_zollhof_1k",
+            "name": "广场夜景",
+            "url": "./images/neuer_zollhof.jpg",
+            "hdr": [
+                "./images/neuer_zollhof_1k.hdr"
+            ]
+        },
+        {
+            "id": "Soft_1Front_2Backs",
+            "name": "Soft_1Front_2Backs",
+            "url": "./images/Soft_1Front_2Backs.jpg",
+            "hdr": [
+                "./images/Soft_1Front_2Backs.hdr"
+            ]
+        },
+        {
+            "id": "Soft_1LowContrastFront_2Backs",
+            "name": "Soft_1LowContrastFront_2Backs",
+            "url": "./images/Soft_1LowContrastFront_2Backs.jpg",
+            "hdr": [
+                "./images/Soft_1LowContrastFront_2Backs.hdr"
+            ]
+        },
+        {
+            "id": "Soft_2RingHighContrast",
+            "name": "Soft_2RingHighContrast",
+            "url": "./images/Soft_2RingHighContrast.jpg",
+            "hdr": [
+                "./images/Soft_2RingHighContrast.hdr"
+            ]
+        },
+        {
+            "id": "Soft_4TubeBank_2BlackFlags",
+            "name": "Soft_4TubeBank_2BlackFlags",
+            "url": "./images/Soft_4TubeBank_2BlackFlags.jpg",
+            "hdr": [
+                "./images/Soft_4TubeBank_2BlackFlags.hdr"
+            ]
+        },
+        {
+            "id": "Soft_5DaylightStudio",
+            "name": "Soft_5DaylightStudio",
+            "url": "./images/Soft_5DaylightStudio.jpg",
+            "hdr": [
+                "./images/Soft_5DaylightStudio.hdr"
+            ]
+        },
+        {
+            "id": "studio",
+            "name": "studio",
+            "url": "./images/studio.jpg",
+            "hdr": [
+                "./images/studio.hdr"
+            ]
+        },
+        {
+            "id": "studio_02",
+            "name": "studio_02",
+            "url": "./images/studio_02.jpg",
+            "hdr": [
+                "./images/studio_02.hdr"
+            ]
+        },
+        {
+            "id": "studio_03",
+            "name": "studio_03",
+            "url": "./images/studio_03.jpg",
+            "hdr": [
+                "./images/studio_03.hdr"
+            ]
+        },
+        {
+            "id": "studio_04",
+            "name": "studio_04",
+            "url": "./images/studio_04.jpg",
+            "hdr": [
+                "./images/studio_04.hdr"
+            ]
+        },
+        {
+            "id": "studio_05",
+            "name": "studio_05",
+            "url": "./images/studio_05.jpg",
+            "hdr": [
+                "./images/studio_05.hdr"
+            ]
+        },
+        {
+            "id": "studio_06",
+            "name": "studio_06",
+            "url": "./images/studio_06.jpg",
+            "hdr": [
+                "./images/studio_06.hdr"
+            ]
+        },
+        {
+            "id": "studio_black_soft_light",
+            "name": "studio_black_soft_light",
+            "url": "./images/studio_black_soft_light.jpg",
+            "hdr": [
+                "./images/studio_black_soft_light.hdr"
+            ]
+        },
+        {
+            "id": "studio_black_soft_light_1",
+            "name": "studio_black_soft_light_1",
+            "url": "./images/studio_black_soft_light_1.jpg",
+            "hdr": [
+                "./images/studio_black_soft_light_1.hdr"
+            ]
+        },
+        {
+            "id": "studio_white_hard_sunlight",
+            "name": "studio_white_hard_sunlight",
+            "url": "./images/studio_white_hard_sunlight.jpg",
+            "hdr": [
+                "./images/studio_white_hard_sunlight.hdr"
+            ]
+        },
+        {
+            "id": "studio_white_umbrella_soft_light",
+            "name": "studio_white_umbrella_soft_light",
+            "url": "./images/studio_white_umbrella_soft_light.jpg",
+            "hdr": [
+                "./images/studio_white_umbrella_soft_light.hdr"
+            ]
+        }
+    ],
+    "scene/background/env/default": "abandoned_slipway_1k_blur",
+    "scene/illumination/env/default": "abandoned_slipway_1k",
+    "scene/background/img/default": "kloppenheim_06_2k",
+    "scene/background/img/maps": [
+        {
+            "id": "spacex--p-KCm6xB9I-unsplash",
+            "name": "发射基地",
+            "thumb": "./images/spacex--p-KCm6xB9I-unsplash.jpg",
+            "url": "./images/spacex--p-KCm6xB9I-unsplash.jpg"
+        },
+        {
+            "id": "birmingham-museums-trust-wKlHsooRVbg-unsplash",
+            "name": "山水画",
+            "thumb": "./images/birmingham-museums-trust-wKlHsooRVbg-unsplash.jpg",
+            "url": "./images/birmingham-museums-trust-wKlHsooRVbg-unsplash.jpg"
+        },
+        {
+            "id": "tiankonghe3",
+            "name": "tiankonghe3",
+            "thumb": "./images/tiankonghe3.jpg",
+            "url": "./images/tiankonghe3.jpg"
+        }
+    ],
+    "scene/background/color/default": "#333333",
+    "scene/illumination/light/params": null,
+    "scene/illumination/light/preset": [
+        {
+            "id": "threepointlight",
+            "name": "三点光源",
+            "thumb": "./images/ThreePointLight.jpg",
+            "lights": [
+                {
+                    "metadata": {
+                        "version": 4.5,
+                        "type": "Object",
+                        "generator": "Object3D.toJSON"
+                    },
+                    "object": {
+                        "uuid": "F84ABD08-8B3F-4D79-883A-D135E5D6323E",
+                        "type": "HemisphereLight",
+                        "name": "HemisphereLight",
+                        "layers": 1,
+                        "matrix": [
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            5,
+                            0,
+                            1
+                        ],
+                        "color": 16777215,
+                        "groundColor": 16777215,
+                        "intensity": 1
+                    }
+                },
+                {
+                    "metadata": {
+                        "version": 4.5,
+                        "type": "Object",
+                        "generator": "Object3D.toJSON"
+                    },
+                    "object": {
+                        "uuid": "579F35A4-4C66-47D3-AF66-85DC18E1AD83",
+                        "type": "DirectionalLight",
+                        "name": "DirectionalLight",
+                        "visible": false,
+                        "layers": 1,
+                        "matrix": [
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            -3,
+                            2,
+                            2.5,
+                            1
+                        ],
+                        "color": 7126015,
+                        "intensity": 0.2,
+                        "shadow": {
+                            "bias": -0.001
+                        }
+                    }
+                },
+                {
+                    "metadata": {
+                        "version": 4.5,
+                        "type": "Object",
+                        "generator": "Object3D.toJSON"
+                    },
+                    "object": {
+                        "uuid": "9823A0AD-BA10-4D63-83D3-CB46822316E4",
+                        "type": "DirectionalLight",
+                        "name": "DirectionalLight",
+                        "layers": 1,
+                        "visible": false,
+                        "matrix": [
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            -1,
+                            -1.5,
+                            1,
+                            1
+                        ],
+                        "color": 13094143,
+                        "intensity": 0.96,
+                        "shadow": {
+                            "bias": -0.001
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

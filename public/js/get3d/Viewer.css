@@ -1,0 +1,401 @@
+body {
+    font-size: 12px
+}
+
+:root {
+    color-scheme: normal
+}
+
+*,
+:after,
+:before {
+    box-sizing: content-box
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004d;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    display: none
+}
+
+.mask.show {
+    display: flex
+}
+
+.tip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004d;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    display: none;
+    z-index: 2
+}
+
+.tip img {
+    width: 16rem;
+    position: absolute;
+    top: .8rem;
+    right: .8rem
+}
+
+#Get3DViewer {
+    width: 100%;
+    height: 100%
+}
+
+#openApp {
+    position: absolute;
+    font-size: 1.4rem;
+    line-height: 4rem;
+    color: #1e6fff;
+    text-align: center;
+    bottom: 4.5rem;
+    left: calc(50% - 16.8rem);
+    display: none;
+    width: 33.6rem;
+    height: 4rem;
+    background: #FFFFFF;
+    border: .1rem solid rgba(51, 51, 51, .1);
+    box-shadow: 0 .2rem .4rem #0000000a;
+    border-radius: 2rem;
+    z-index: 1
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black
+}
+
+.loading img {
+    width: 60px
+}
+
+.loading .progress {
+    width: 346px;
+    height: 70px;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 0 0;
+    text-align: center
+}
+
+.loading .progress .left {
+    height: 8px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 6px
+}
+
+.loading .progress .left div {
+    position: absolute;
+    height: 8px;
+    left: 0;
+    top: 0;
+    width: 0;
+    background: linear-gradient(270deg, #78A9FF 0%, rgba(120, 169, 255, .6) 100%);
+    border-radius: 4px
+}
+
+.loading .progress svg {
+    width: 35px;
+    height: 35px;
+    color: #78a9ff;
+    animation: fadenum 2s linear infinite
+}
+
+.loading .progress .protext {
+    margin-top: 6px
+}
+
+@keyframes fadenum {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.G3D-Get3DViewer {
+    cursor: grab
+}
+
+.G3D-Get3DViewer:active {
+    cursor: grabbing
+}
+
+.annotation-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    margin-left: 14px;
+    padding: 10px;
+    min-height: 232px;
+    width: 320px;
+    background-color: #000c;
+    color: #fff;
+    z-index: 9;
+    border-radius: 5px
+}
+
+.annotation-box.hide {
+    display: none
+}
+
+.annotation-box-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 24px;
+    margin-bottom: 3px;
+    word-wrap: break-word;
+    white-space: normal
+}
+
+.annotation-box-title .annotation-title-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.annotation-box-content {
+    flex: 1;
+    margin-top: 5px;
+    word-wrap: break-word;
+    white-space: normal
+}
+
+.annotation-box-content p,
+.annotation-box-content ul,
+.annotation-box-content ol {
+    margin-top: 0
+}
+
+.annotation-box-content ul {
+    padding-left: 20px
+}
+
+.annotation-box .ql-editor {
+    padding: 0
+}
+
+.annotation-box .ql-editor ul,
+.annotation-box .ql-editor ol {
+    padding-left: 0
+}
+
+/*!*.tip-detail-body .w-e-content-mantle::-webkit-scrollbar-track{*!*/
+/*!*	background: #606060;*!*/
+/*!*}*!*/
+.annotation-box iframe {
+    border: none
+}
+
+.annotation-box-content ol {
+    padding-inline-start: 20px
+}
+
+.Animation-box {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 80px;
+    z-index: 999
+}
+
+.Animation-box .animation-control-panel {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: absolute;
+    left: 23px;
+    bottom: 5px;
+    width: 100%;
+    height: 40px
+}
+
+.animation-control-panel .btn-animation-play {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: 55%
+}
+
+.animation-control-panel>div:hover {
+    background-color: #00000080
+}
+
+.btn-animation-play.playing {
+    background-size: 48%
+}
+
+.animation-length {
+    padding: 3px 6px;
+    margin-left: 10px;
+    margin-top: 3px;
+    color: #fff;
+    border-radius: 5px
+}
+
+.animation-select {
+    padding: 3px 20px 3px 6px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 3px;
+    color: #fff;
+    border-radius: 5px
+}
+
+.animation-select:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 6px;
+    height: 0;
+    border-top: 4px solid #FFFFFF;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 0
+}
+
+.animation-select.active {
+    background-color: #00000080
+}
+
+.animation-select.active:after {
+    transform: rotate(180deg)
+}
+
+.animation-list {
+    position: absolute;
+    display: none;
+    padding: 6px;
+    left: 0;
+    bottom: 110%;
+    list-style: none;
+    background-color: #00000080;
+    z-index: 99999;
+    border-radius: 5px
+}
+
+.animation-select.active .animation-list {
+    display: block
+}
+
+.animation-item {
+    display: block;
+    padding: 3px 6px;
+    white-space: nowrap
+}
+
+.animation-item:hover {
+    background-color: #ffffff4d
+}
+
+.Animation-Bar {
+    display: flex;
+    justify-content: space-between;
+    min-width: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 40px
+}
+
+.Animation-Bar .TimeLineWrapper {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    background: transparent;
+    transition: all .2s ease-out;
+    transform: translate(-50%);
+    flex-flow: row nowrap
+}
+
+.Animation-Bar .TimeLineWrapper .TimeLineTrack {
+    position: absolute;
+    right: 1px;
+    left: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    height: 100%;
+    transition: opacity .2s ease-in-out;
+    transform: translate(0)
+}
+
+.Animation-Bar .TimeLineWrapper .TimeLineTrack .TimeLineBar {
+    position: absolute;
+    margin-right: 14px;
+    right: 1px;
+    left: 1px;
+    height: 3px;
+    top: 20px;
+    background: hsla(0, 0%, 93.3%, .5);
+    transform: none
+}
+
+.Animation-Bar .TimeLineWrapper .TimeLineTrack .TimeLineKnob {
+    position: absolute;
+    top: 14px;
+    left: -7px;
+    width: 14px;
+    height: 14px;
+    background: #0097d5;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    pointer-events: none
+}
+
+@keyframes AnimationKnob {
+    0% {
+        left: 0
+    }
+
+    to {
+        left: 100%
+    }
+}
+
+#viewport {
+    width: 100%;
+    height: 100%;
+}
+
+#viewport canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#viewport .hide {
+    display: none;
+}

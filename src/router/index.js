@@ -188,6 +188,13 @@ const routes = [
                 component: () => import('@/views/webgl/helloPoint.vue'),
             },
             /* webgl end */
+            /* get3d end */
+            {
+                path: '/get3dModelEdit',
+                name: "get3dModelEdit",
+                component: () => import('@/views/get3D/modelEdit/index.vue'),
+            },
+            /* get3d end */
         ]
 
     }

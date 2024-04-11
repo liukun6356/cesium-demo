@@ -26,7 +26,6 @@ export default {
         orientation,
         model: {
           uri: process.env.VUE_APP_GIS_API + '/modelView/model4.glb',
-          // scale: 4
         }
       });
       // viewer.flyTo(modelRotationEntity);

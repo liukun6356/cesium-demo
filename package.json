@@ -24,6 +24,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.14",

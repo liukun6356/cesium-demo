@@ -1,0 +1,388 @@
+{
+  "geometries": [
+    {
+      "uuid": "A90B2F2F-2629-4FA3-8086-91CC15109864",
+      "fileName": "DY_JK28-1-19_B19S2K05.gltf",
+      "modelName": "faces_0_158158"
+    }
+  ],
+  "materials": [
+    {
+      "uuid": "55399355-2895-44B0-BF71-1DE5B26ECE0C",
+      "type": "MeshPhysicalMaterial",
+      "name": "DefaultMaterial36",
+      "color": 16777215,
+      "roughness": 1,
+      "metalness": 0,
+      "emissive": 0,
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "map": "83C61739-099A-44A6-A278-9A8EB260FD71",
+      "envMapIntensity": 1,
+      "reflectivity": 0.5,
+      "refractionRatio": 0.98,
+      "depthFunc": 3,
+      "depthTest": true,
+      "depthWrite": true,
+      "colorWrite": true,
+      "stencilWrite": false,
+      "stencilWriteMask": 255,
+      "stencilFunc": 519,
+      "stencilRef": 0,
+      "stencilFuncMask": 255,
+      "stencilFail": 7680,
+      "stencilZFail": 7680,
+      "stencilZPass": 7680,
+      "userData": {
+        "colorIntensity": 1,
+        "uniforms": {
+          "specular": {
+            "value": 0
+          },
+          "specularMap": {
+            "value": null
+          }
+        },
+        "defines": {
+          "STANDARD": "",
+          "PHYSICAL": "",
+          "USE_SPECULAR": "",
+          "USE_UV": ""
+        }
+      }
+    }
+  ],
+  "textures": [
+    {
+      "uuid": "83C61739-099A-44A6-A278-9A8EB260FD71",
+      "name": "DY_JK28-1-19_B19S2K05__0",
+      "mapping": 300,
+      "repeat": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "center": [
+        0,
+        0
+      ],
+      "rotation": 0,
+      "wrap": [
+        1000,
+        1000
+      ],
+      "format": 1022,
+      "type": 1009,
+      "encoding": 3001,
+      "minFilter": 1008,
+      "magFilter": 1006,
+      "anisotropy": 16,
+      "flipY": false,
+      "premultiplyAlpha": false,
+      "unpackAlignment": 4,
+      "image": "39B6A346-1A47-4449-BA0B-D0F23AF52726"
+    }
+  ],
+  "images": [
+    {
+      "uuid": "39B6A346-1A47-4449-BA0B-D0F23AF52726",
+      "url": "http://fm-dzdx.daspatial.com/real3d/2023-08-29/3dtiles/1696426180878622720/./DY_JK28-1-19_B19S2K05__0.jpg",
+      "fileName": "http://fm-dzdx.daspatial.com/real3d/2023-08-29/3dtiles/1696426180878622720/./DY_JK28-1-19_B19S2K05__0.jpg"
+    }
+  ],
+  "gltfs": [
+    {
+      "url": "./DY_JK28-1-19_B19S2K05.gltf",
+      "name": "DY_JK28-1-19_B19S2K05.gltf"
+    }
+  ],
+  "backgroundData": {
+    "backgroundExposure": 1,
+    "envMapIntensity": 1,
+    "envAngle": 0,
+    "backgroundType": "Equirectangular",
+    "backgroundData": "abandoned_slipway_1k_blur.hdr",
+    "envData": null,
+    "envType": null,
+    "toneMappingSaturation": 1.39,
+    "toneMappingContrast": 0.96
+  },
+  "lightFlag": true,
+  "object": {
+    "uuid": "562332A2-224F-4457-A482-17A7716CAFC9",
+    "type": "Scene",
+    "name": "DY_JK28-1-19_B19S2K05.gltf",
+    "userData": {
+      "gltfs": [
+        {
+          "url": "./DY_JK28-1-19_B19S2K05.gltf",
+          "name": "DY_JK28-1-19_B19S2K05.gltf"
+        }
+      ],
+      "imgeFileNames": {},
+      "cameraLimit": null
+    },
+    "layers": 1,
+    "matrix": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "background": true,
+    "children": [
+      {
+        "uuid": "81CDC6D5-D020-4EA9-B44D-43E6D307B1A6",
+        "type": "Group",
+        "name": "DY_JK28-1-19_B19S2K05.gltf",
+        "castShadow": true,
+        "layers": 1,
+        "matrix": [
+          -4.4408920985006247e-16,
+          -0.9999999999999997,
+          8.881784197001249e-16,
+          0,
+          0,
+          -8.881784197001249e-16,
+          -0.9999999999999997,
+          0,
+          0.9999999999999997,
+          -4.4408920985006247e-16,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "children": [
+          {
+            "uuid": "F3176D97-AC10-4208-B5EE-23857B794430",
+            "type": "Group",
+            "userData": {
+              "fileName": "DY_JK28-1-19_B19S2K05.gltf"
+            },
+            "layers": 1,
+            "matrix": [
+              0.028668216840572452,
+              0,
+              0,
+              0,
+              0,
+              0.028668216840572452,
+              0,
+              0,
+              0,
+              0,
+              0.028668216840572452,
+              0,
+              -0.1067555844783783,
+              0.3631232976913452,
+              -0.7447390556335449,
+              1
+            ],
+            "children": [
+              {
+                "uuid": "337C86F3-2DD2-48E8-A0AB-EA8B2A9D61F6",
+                "type": "Mesh",
+                "name": "faces_0_158158",
+                "castShadow": true,
+                "userData": {
+                  "name": "faces_0_158158",
+                  "fileName": "DY_JK28-1-19_B19S2K05.gltf"
+                },
+                "layers": 1,
+                "matrix": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "geometry": "A90B2F2F-2629-4FA3-8086-91CC15109864",
+                "material": "55399355-2895-44B0-BF71-1DE5B26ECE0C"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "9823A0AD-BA10-4D63-83D3-CB46822316E4",
+        "type": "DirectionalLight",
+        "name": "DirectionalLight",
+        "visible": false,
+        "layers": 1,
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1,
+          -1.5,
+          1,
+          1
+        ],
+        "color": 13094143,
+        "intensity": 0.96
+      },
+      {
+        "uuid": "579F35A4-4C66-47D3-AF66-85DC18E1AD83",
+        "type": "DirectionalLight",
+        "name": "DirectionalLight",
+        "visible": false,
+        "layers": 1,
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -3,
+          2,
+          2.5,
+          1
+        ],
+        "color": 7126015,
+        "intensity": 0.2
+      },
+      {
+        "uuid": "F84ABD08-8B3F-4D79-883A-D135E5D6323E",
+        "type": "HemisphereLight",
+        "name": "HemisphereLight",
+        "layers": 1,
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          5,
+          0,
+          1
+        ],
+        "color": 16777215,
+        "intensity": 1,
+        "groundColor": 16777215
+      }
+    ]
+  },
+  "camera": {
+    "metadata": {
+      "version": 4.5,
+      "type": "Object",
+      "generator": "Object3D.toJSON"
+    },
+    "object": {
+      "uuid": "A8FFFDCE-FC7D-4E97-A9BF-DD8CEBBDFDED",
+      "type": "PerspectiveCamera",
+      "name": "Camera",
+      "layers": 1,
+      "matrix": [
+        0.051707638588619556,
+        0,
+        -0.9986622652887147,
+        0,
+        -0.7563429722863668,
+        0.6530020802539953,
+        -0.03916109621776828,
+        0,
+        0.6521285367046987,
+        0.757356113848666,
+        0.0337651955633904,
+        0,
+        2.831645249911237,
+        3.6483087917394377,
+        0.13443511985146808,
+        1
+      ],
+      "fov": 58.68,
+      "zoom": 1,
+      "near": 3.36,
+      "far": 100,
+      "focus": 10,
+      "aspect": 1.465201465201465,
+      "filmGauge": 35,
+      "filmOffset": 0
+    }
+  },
+  "controls": {
+    "minDistance": 0,
+    "minAzimuthAngle": -1.5707963267948966,
+    "maxAzimuthAngle": 4.71221444745949,
+    "minPolarAngle": 0,
+    "maxPolarAngle": 3.141592653589793,
+    "target": {
+      "x": 0.34113733754950193,
+      "y": 0.7559320778681351,
+      "z": 0.005484334875860084
+    },
+    "zoomSpeed": 0.75,
+    "enableDamping": true,
+    "dampingFactor": 0.075,
+    "minPan": {
+      "x": -1000,
+      "y": -1000,
+      "z": -1000
+    },
+    "maxPan": {
+      "x": 1000,
+      "y": 1000,
+      "z": 1000
+    }
+  },
+  "metadata": {
+    "version": "2.0",
+    "type": "Object",
+    "generator": "Object3D.toGET3D"
+  },
+  "passes": []
+}
