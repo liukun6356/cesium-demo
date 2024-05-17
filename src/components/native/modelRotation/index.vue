@@ -67,7 +67,6 @@ export default {
         var position1 = Cesium.Cartesian3.add(new Cesium.Cartesian3(0, 0, -10), Cesium.Cartesian3.fromDegrees(99.151194, 25.124811, 2000), new Cesium.Cartesian3());
         var modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(position1);
         childModel.modelMatrix = modelMatrix
-
         viewer.camera.flyTo({
           destination: Cesium.Cartesian3.fromDegrees(99.151697, 25.124711, 1984.73),
           orientation: {
@@ -122,7 +121,7 @@ export default {
     }
   },
   mounted() {
-    this.addModelRotation()
+    // this.addModelRotation()
     this.addRelativeModel()
     // this.addShaper()
   },

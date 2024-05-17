@@ -51,15 +51,18 @@
               </div>
             </div>
             <div class="nodeTreeBox">
-              <el-tree :data='treeNodeData' ref='treeNode' mode-key='id' :default-expand-all="true" :check-on-click-node="false" :expand-on-click-node="false">
+              <el-tree :data='treeNodeData' ref='treeNode' mode-key='id' :default-expand-all="true"
+                       :check-on-click-node="false" :expand-on-click-node="false">
                 <span class="custom-tree-node" slot-scope="{node,data}">
-                  <span>{{node.label}}</span>
+                  <span>{{ node.label }}</span>
                   <span>
                     <el-tooltip class="item" effect='dark' content='删除视角' placement='bottom'>
-                      <el-button type="primary" icon="el-icon-delete" circle size="medium" v-if='!data.roam_remark' @click="()=>removeNode(node,data)"></el-button>
+                      <el-button type="primary" icon="el-icon-delete" circle size="medium" v-if='!data.roam_remark'
+                                 @click="()=>removeNode(node,data)"></el-button>
                     </el-tooltip>
                     <el-tooltip class="item" effect="dark" content="查看视角" placement="bottom">
-                      <el-button type="primary" icon="el-icon-view" circle size="medium" @click="viewPerspectiveNode(node)"></el-button>
+                      <el-button type="primary" icon="el-icon-view" circle size="medium"
+                                 @click="viewPerspectiveNode(node)"></el-button>
                     </el-tooltip>
                   </span>
                 </span>
@@ -70,22 +73,27 @@
             </div>
           </el-tab-pane>
           <el-tab-pane label='已有漫游' name='hasRoam'>
-            <el-tree :data='treeData' ref='tree' node-key="id" :check-on-click-node="false" :expand-on-click-node="false">
+            <el-tree :data='treeData' ref='tree' node-key="id" :check-on-click-node="false"
+                     :expand-on-click-node="false">
               <span class="custom-tree-node" slot-scope="{node,data}">
-                <span>{{data.label}}</span>
+                <span>{{ data.label }}</span>
                 <span>
                   <el-tooltip class="item" effect='dark' content='删除漫游' placement="bottom">
-                    <el-button type='primary' icon='el-icon-delete' circle size="medium" v-if="data.roam_remark" @click="() => removeRoam(node, data)">
+                    <el-button type='primary' icon='el-icon-delete' circle size="medium" v-if="data.roam_remark"
+                               @click="() => removeRoam(node, data)">
                     </el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="删除视角" placement="bottom">
-                    <el-button type="primary" icon="el-icon-delete" circle size="medium" v-if="!data.roam_remark" @click="() => remove(node, data)"></el-button>
+                    <el-button type="primary" icon="el-icon-delete" circle size="medium" v-if="!data.roam_remark"
+                               @click="() => remove(node, data)"></el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="播放漫游" placement="bottom">
-                    <el-button type="primary" icon="el-icon-video-play" circle size="medium" v-if="data.roam_remark" @click="playRoam(node)"></el-button>
+                    <el-button type="primary" icon="el-icon-video-play" circle size="medium" v-if="data.roam_remark"
+                               @click="playRoam(node)"></el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="查看视角" placement="bottom">
-                    <el-button type="primary" icon="el-icon-view" circle size="medium" v-if="!data.roam_remark" @click='viewPerspective(node)'></el-button>
+                    <el-button type="primary" icon="el-icon-view" circle size="medium" v-if="!data.roam_remark"
+                               @click='viewPerspective(node)'></el-button>
                   </el-tooltip>
                 </span>
               </span>
@@ -93,9 +101,15 @@
           </el-tab-pane>
         </el-tabs>
         <div class="roamingBtnsTree" v-if="isTreeRoaming">
-          <el-tooltip class="item" effect="dark" content="播放" placement="bottom"><i class="fa fa-play" @click="reStartRoaming"></i></el-tooltip>
-          <el-tooltip class="item" effect="dark" content="暂停" placement="bottom"><i class="fa fa-pause" @click="pauseRoaming"></i></el-tooltip>
-          <el-tooltip class="item" effect="dark" content="停止" placement="bottom"><i class="fa fa-stop" @click="stopRoaming"></i></el-tooltip>
+          <el-tooltip class="item" effect="dark" content="播放" placement="bottom"><i class="fa fa-play"
+                                                                                    @click="reStartRoaming"></i>
+          </el-tooltip>
+          <el-tooltip class="item" effect="dark" content="暂停" placement="bottom"><i class="fa fa-pause"
+                                                                                    @click="pauseRoaming"></i>
+          </el-tooltip>
+          <el-tooltip class="item" effect="dark" content="停止" placement="bottom"><i class="fa fa-stop"
+                                                                                    @click="stopRoaming"></i>
+          </el-tooltip>
         </div>
       </div>
     </div>
@@ -103,7 +117,8 @@
 </template>
 
 <script>
-import { addOrUpdate, getAllList, deleteRoam } from "@/api/request/fxmy.js";
+import {addOrUpdate, getAllList, deleteRoam} from "@/api/request/fxmy.js";
+
 export default {
   data() {
     return {
@@ -139,7 +154,7 @@ export default {
       this.roamingSpacelabelTreeNum++;
       let roamingSpacelabelName = this.form.nodeName + "_" + this.roamingSpacelabelTreeNum;
       this.treeNodeData.push({
-        id: dasutil.NewGuid(),
+        id: this.uuid(),
         label: roamingSpacelabelName,
         time: this.form.time,
         cameraState: roamingSpacelabelCarmeraState
@@ -151,7 +166,7 @@ export default {
     reStartRoaming() {// 重新开始漫游  --播放控件调用
       // 开始上次暂停位置漫游
       let self = this;
-      self, this.flyRecursion(self.curRoamingArr_i, self.curRoamingArr, function () {
+      this.flyRecursion(self.curRoamingArr_i, self.curRoamingArr, function () {
         self.isTreeRoaming = false;
         self.isNodeRoaming = false;
       });
@@ -205,7 +220,7 @@ export default {
           });
         }
         let params = {
-          roam_id: dasutil.NewGuid(),
+          roam_id: this.uuid(),
           roam_name: this.form.roamName,
           roam_remark: 'roam_remark',
           space_label: JSON.stringify(roamNodes)
@@ -300,57 +315,52 @@ export default {
     roamingPlay(nodeArr) { // 播放漫游 -- 点击树节点播放按钮调用
       const self = this;
       console.log(nodeArr);
-      if (nodeArr && nodeArr.length && nodeArr.length > 0) {
+      if (nodeArr && nodeArr.length && nodeArr.length > 0) { // 先定位到第一个点
         let camerastate = nodeArr[0].cameraState;
-        self.setCameraView(camerastate);
+        self.flyToCamerastate(camerastate, undefined, 0.01, function () {
+          if (nodeArr.length > 1) {
+            // 开始漫游 -- 第一个节点直接 setCameraView , 不需要飞行
+            self.flyRecursion(1, nodeArr, function () {
+              self.isTreeRoaming = false;
+              self.isNodeRoaming = false;
+            });
+          }
+        });
       }
-      if (nodeArr.length > 1) {
-        setTimeout(() => {
-          // 开始漫游 -- 第一个节点直接 setCameraView , 不需要飞行
-          self.flyRecursion(1, nodeArr, function () {
-            self.isTreeRoaming = false;
-            self.isNodeRoaming = false;
-          });
-        }, 500);
-      }
+
     },
     pauseFly() {// 停止当前飞行
       this.flyToCamerastate(
-        this.getCamerastate(),
-        undefined,
-        1,
-        function () { }
+          this.getCamerastate(),
+          undefined,
+          1,
+          function () {
+          }
       );
     },
     viewPerspectiveNode(node) {// 查看节点视角node
       const self = this;
       self.isNodeRoaming = true;
       self.flyToCamerastate(
-        node.data.cameraState,
-        undefined,
-        node.data.time,
-        function () {
-          self.isNodeRoaming = false;
-        }
+          node.data.cameraState,
+          undefined,
+          node.data.time,
+          function () {
+            self.isNodeRoaming = false;
+          }
       );
     },
     viewPerspective(node) {// 查看视角 tree
       const self = this;
       self.isTreeRoaming = true;
       self.flyToCamerastate(
-        node.data.cameraState,
-        undefined,
-        node.data.time,
-        function () {
-          self.isTreeRoaming = false;
-        }
+          node.data.cameraState,
+          undefined,
+          node.data.time,
+          function () {
+            self.isTreeRoaming = false;
+          }
       );
-    },
-    setCameraView(camerastate) {//定位视角
-      if (camerastate) {
-        console.log(222);
-        this.flyToCamerastate(camerastate, undefined, 0.01, function () { });
-      }
     },
     flyRecursion(i, nodeArr, callback) { // 飞行递归方法
       const self = this;
@@ -421,6 +431,12 @@ export default {
           this.getRoamList();
         }
       });
+    },
+    uuid() {
+      const tempUrl = URL.createObjectURL(new Blob());
+      const uuid = tempUrl.toString();
+      URL.revokeObjectURL(tempUrl);  // 释放这个url
+      return uuid.substring(uuid.lastIndexOf("/") + 1)
     }
   },
   mounted() {
@@ -432,20 +448,24 @@ export default {
 <style lang='less' scoped>
 .fxmyPanel {
   height: calc(100% - 310px);
+
   .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     padding: 10px 0;
+
     .close-btn {
       margin-right: 10px;
       opacity: 0.8;
       cursor: pointer;
+
       &:hover {
         opacity: 1;
       }
     }
+
     .header-split-line {
       position: absolute;
       left: 0;
@@ -455,11 +475,13 @@ export default {
       background: url("~@/assets/img/line.png") no-repeat center/100% 100%;
     }
   }
+
   .card-content {
     position: relative;
     height: calc(100% - 40px);
     font-size: 14px;
     font-weight: normal;
+
     .secondTitle {
       display: flex;
       align-items: center;
@@ -467,6 +489,7 @@ export default {
       height: 30px;
       margin-bottom: 5px;
       line-height: 30px;
+
       span {
         display: inline-block;
         height: 50%;
@@ -474,31 +497,37 @@ export default {
         margin-right: 10px;
         background-color: #409eff;
       }
+
       .roamingBtns {
         display: flex;
         position: absolute;
         right: 0;
         justify-content: space-around;
         width: 100px;
+
         i {
           cursor: pointer;
           opacity: 0.8;
+
           &:hover {
             opacity: 1;
           }
         }
       }
     }
+
     .roamBtns {
       display: flex;
       justify-content: space-around;
       margin-bottom: 5px;
+
       .el-button--primary.is-plain,
       .el-button--success.is-plain {
         background: transparent;
         flex: 1;
       }
     }
+
     .nodeTreeBox {
       width: 100%;
       height: 220px;
@@ -509,13 +538,16 @@ export default {
       border-radius: 4px;
       background: #37578d3f;
     }
+
     .addBtn {
       display: flex;
       width: 100%;
+
       .el-button--success {
         flex: 1;
       }
     }
+
     .roamingBtnsTree {
       display: flex;
       justify-content: space-between;
@@ -524,9 +556,11 @@ export default {
       top: 13px;
       width: 100px;
       z-index: 10;
+
       i {
         cursor: pointer;
         opacity: 0.8;
+
         &:hover {
           opacity: 1;
         }
@@ -534,18 +568,22 @@ export default {
     }
   }
 }
+
 // 修改tab栏样式
 ::v-deep {
   .el-tabs {
     height: 100%;
   }
+
   .el-tabs__nav {
-      width: 100%;
-    }
+    width: 100%;
+  }
+
   .el-tabs__content {
     overflow: auto;
     max-height: calc(100% - 55px);
   }
+
   .el-tabs__nav-wrap::after {
     content: "";
     position: absolute;
@@ -556,6 +594,7 @@ export default {
     background-color: #e4e7ed50;
     z-index: 1;
   }
+
   .el-tabs__item {
     padding: 0 20px;
     height: 40px;
@@ -570,9 +609,11 @@ export default {
     position: relative;
     width: 30%;
     text-align: center;
+
     &.is-active {
       color: #409eff;
     }
+
     &:hover {
       color: #409eff;
       cursor: pointer;
@@ -588,25 +629,31 @@ export default {
     width: 30%;
     text-align: center;
   }
+
   .el-input__inner {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.8);
   }
+
   .el-input__inner::placeholder {
     color: #909399;
   }
+
   .el-input-group {
     margin-bottom: 10px;
   }
+
   .el-button--primary.is-plain {
     border: 1px solid #409eff;
     color: #409eff;
   }
+
   .el-button--primary.is-plain:hover {
     border: 1px solid #fff;
     color: #fff;
   }
 }
+
 // 修改 tree 样式
 .custom-tree-node {
   display: flex;
@@ -616,24 +663,29 @@ export default {
   font-size: 14px;
   padding-right: 8px;
 }
+
 ::v-deep {
   .el-tree {
     background: transparent;
     color: rgba(255, 255, 255, 0.8);
   }
+
   .el-tree-node:focus > .el-tree-node__content {
     //选中
     background: rgba(25, 56, 111, 0.5);
   }
+
   .el-tree-node__content:hover {
     //鼠标滑过
     background: rgba(25, 56, 111, 0.3);
   }
+
   .el-button--primary {
     color: #999;
     background-color: transparent;
     border-color: transparent;
   }
+
   .el-button--primary:focus,
   .el-button--primary:hover {
     background: transparent;
@@ -641,6 +693,7 @@ export default {
     color: #fff;
   }
 }
+
 // 通用样式
 .panel {
   position: fixed;
@@ -652,12 +705,15 @@ export default {
   font-weight: bold;
   background: var(--backgroundtobar);
   box-sizing: border-box;
+
   &.right {
     right: 60px;
   }
+
   &.left {
     left: 60px;
   }
+
   .content {
     padding: 10px;
     width: 100%;

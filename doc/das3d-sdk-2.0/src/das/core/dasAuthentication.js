@@ -16,7 +16,7 @@ export class dasAuthentication {
         setTimeout(function(){
             that.getToken(that);
         },5000)
-       
+
     }
     getToken(that) {
         //var that = this;
@@ -26,6 +26,7 @@ export class dasAuthentication {
             url: that.serverIP + "/auth/license?datetime=" + new Date().getTime(),
             success: function success(config) {
                 if (!(config.data[19] - 0)) {
+                  debugger
                     alert(Base64.decode("5b2T5YmN5L2/55So55qE5LqR56uv5Zyw55CD5pyq5rOo5YaM"));
                     that.addImage(that.viewer);
                     that.noAuthorization = true;
@@ -36,11 +37,11 @@ export class dasAuthentication {
                         that.addImage(that.viewer);
                       }
                 }
-                
             },
             error: function error(XMLHttpRequest, textStatus, errorThrown) {
                 that.addImage(that.viewer);
                 that.watermark();
+                debugger
                 alert(Base64.decode("5b2T5YmN5L2/55So55qE5LqR56uv5Zyw55CD5pyq5rOo5YaM"));
             }
         })

@@ -43,7 +43,7 @@ export default {
     }
     var a_PointSize = gl.getAttribLocation(gl.program, 'a_PointSize');
     // 向attribute变量赋值
-    gl.vertexAttrib3f(a_Position, 0.5, 0.0, 0.0);
+    gl.vertexAttrib3f(a_Position, 0.7, 0.0, 0.0);
     gl.vertexAttrib1f(a_PointSize, 50);
 
     // Specify the color for clearing <canvas>

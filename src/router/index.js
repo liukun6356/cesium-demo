@@ -170,6 +170,11 @@ const routes = [
                 name: "modelTree",
                 component: () => import('@/components/native/modelTree/index.vue'),
             },
+            {
+                path: '/aaa',
+                name: "aaa",
+                component: () => import('@/components/native/aaa/index.vue'),
+            },
             /* native end */
             /* webgl start */
             {
@@ -195,6 +200,7 @@ const routes = [
                 component: () => import('@/views/get3D/modelEdit/index.vue'),
             },
             /* get3d end */
+
         ]
 
     }

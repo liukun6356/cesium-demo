@@ -87,7 +87,7 @@ export default {
               styleOptions: {
                 fill: true,
                 color: "rgb(2,26,79)",
-                opacity: 0.7,
+                opacity: 0.8,
                 outline: true,
                 outlineColor: "#ccc",
                 outlineWidth: 10,

@@ -1,4 +1,4 @@
-<!--矢量注记-->
+<!--地形注记-->
 <template></template>
 
 <script>

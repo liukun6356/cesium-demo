@@ -62,4 +62,7 @@ export default {
   padding-top: 50px;
   text-align: center;
 }
+.mask_div{
+  display: none !important;
+}
 </style>

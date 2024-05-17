@@ -27340,311 +27340,311 @@
               window.location.hostname + ':' + (window.location.port || 80)
             var serverIP = that.config.serverIP || 'https://' + ipstr
               console.log(process.env.VUE_APP_GIS_API,33333333333333333)
-            $.ajax({
-              type: 'GET',
-              async: false,
-              url:
-                serverIP +
-                '/auth/getAllResource?datetime=' +
-                new Date().format('yyyy-MM-dd HH:mm:ss'),
-              success: function success(data) {
-                if (data && data.data) {
-                  data = data.data
-                  var tempArr = {}
-                  if (data.length > 0) {
-                    that.config.operationallayers.push({
-                      id: 80,
-                      name: '后台服务数据',
-                      type: 'group',
-                    })
-                  }
-                  for (var i = 0; i < data.length; i++) {
-                    var item = data[i]
-                    item.format = item.format.toLowerCase()
-                    var layersItem
-                    switch (item.format) {
-                      case '3dtiles':
-                        if (!tempArr['3dtiles']) {
-                          tempArr['3dtiles'] = true
-                          that.config.operationallayers.push({
-                            id: 81,
-                            pid: 80,
-                            name: '倾斜模型',
-                            type: 'group',
-                          })
-                        }
-                        layersItem = {
-                          cullWithChildrenBounds: false,
-                          dynamicScreenSpaceError: true,
-                          flyTo: false,
-                          hasLayer: true,
-                          id: Number('8010' + (20 + i)),
-                          maximumMemoryUsage: 1024,
-                          maximumScreenSpaceError: 16,
-                          name: item.name,
-                          order: 87,
-                          pid: 81,
-                          preferLeaves: true,
-                          skipLevelOfDetail: true,
-                          type: item.format,
-                          url: item.url,
-                          visible: false,
-                          _key: '',
-                        }
-                        break
-                      case 'geojson':
-                        if (!tempArr['geojson']) {
-                          tempArr['geojson'] = true
-                          that.config.operationallayers.push({
-                            id: 82,
-                            pid: 80,
-                            name: 'GEOJSON数据',
-                            type: 'group',
-                          })
-                        }
-                        layersItem = {
-                          pid: 82,
-                          type: item.format,
-                          name: item.name,
-                          url: item.url,
-                          symbol: {
-                            styleOptions: {
-                              clampToGround: true,
-                            },
-                          },
-                        }
-                        break
-                      case 'kml':
-                        if (!tempArr['kml']) {
-                          tempArr['kml'] = true
-                          that.config.operationallayers.push({
-                            id: 83,
-                            pid: 80,
-                            name: 'KML数据',
-                            type: 'group',
-                          })
-                        }
-                        layersItem = {
-                          pid: 83,
-                          type: item.format,
-                          name: item.name,
-                          url: item.url,
-                          popup: 'all',
-                        }
-                        break
-                      case 'gltf':
-                        if (!tempArr['gltf']) {
-                          tempArr['gltf'] = true
-                          that.config.operationallayers.push({
-                            id: 84,
-                            pid: 80,
-                            name: 'GLTF数据',
-                            type: 'group',
-                          })
-                        }
-                        layersItem = {
-                          pid: 84,
-                          type: item.format,
-                          name: item.name,
-                          url: item.url,
-                          position: {
-                            y: 31.821083,
-                            x: 117.21832,
-                            z: 59.87,
-                          },
-                          style: {
-                            scale: 10,
-                            heading: -93,
-                          },
-                          popup: '示例信息，测试数据',
-                          center: {
-                            y: 31.821083,
-                            x: 117.21832,
-                            z: 832.64,
-                            heading: 2.3,
-                            pitch: -39.2,
-                            roll: 0,
-                          },
-                        }
-                        break
-                      case 'wmts':
-                        if (!tempArr['wmts']) {
-                          tempArr['wmts'] = true
-                          that.config.operationallayers.push({
-                            id: 85,
-                            pid: 80,
-                            name: 'wmts数据',
-                            type: 'group',
-                          })
-                        }
-
-                        var properties
-                        var bbox
-                        if (item.properties) {
-                          properties = JSON.parse(item.properties)
-                          bbox =
-                            properties &&
-                            properties.bbox &&
-                            properties.bbox.split(',')
-                        }
-
-                        var maxLevel = 18
-                        var matrixIds = new Array(maxLevel)
-                        for (var z = 0; z <= maxLevel; z++) {
-                          matrixIds[z] = properties.crs + ':' + z.toString()
-                        }
-
-                        layersItem = {
-                          flyTo: false,
-                          hasLayer: true,
-                          id: Number('8010' + (20 + i)),
-                          name: item.name || 'wmts数据',
-                          pid: 85,
-                          parameters: {
-                            transparent: true,
-                            format: item.Format,
-                          },
-                          style: '',
-                          tileMatrixSetID: properties && properties.crs,
-                          layer: properties && properties.layer,
-                          extent: {
-                            xmin: Number(bbox[0]),
-                            ymin: Number(bbox[1]),
-                            xmax: Number(bbox[2]),
-                            ymax: Number(bbox[3]),
-                          },
-                          crs: properties && properties.crs,
-                          maximumLevel: 13,
-                          tileMatrixLabels: matrixIds,
-                          type: 'wmts',
-                          url: item.url,
-                          visible: false,
-                        }
-                        break
-                      case 'wfs':
-                        if (!tempArr['wfs']) {
-                          tempArr['wfs'] = true
-                          that.config.operationallayers.push({
-                            id: 86,
-                            pid: 80,
-                            name: 'wfs数据',
-                            type: 'group',
-                          })
-                        }
-
-                        var properties
-                        var bbox
-                        if (item.properties) {
-                          properties = JSON.parse(item.properties)
-                          bbox =
-                            properties &&
-                            properties.bbox &&
-                            properties.bbox.split(',')
-                        }
-
-                        layersItem = {
-                          flyTo: false,
-                          hasLayer: true,
-                          id: Number('8010' + (20 + i)),
-                          name: item.name || 'WFS数据',
-                          pid: 86,
-                          type: 'wfs',
-                          url: item.url,
-                          layer: properties && properties.layer,
-                          extent: {
-                            xmin: Number(bbox[0]),
-                            ymin: Number(bbox[1]),
-                            xmax: Number(bbox[2]),
-                            ymax: Number(bbox[3]),
-                          },
-                          crs: properties && properties.crs,
-                          minimumLevel: 13,
-                          alpha: 0.9,
-                          visible: false,
-                        }
-                        break
-                      case 'wms':
-                        if (!tempArr['wms']) {
-                          tempArr['wms'] = true
-                          that.config.operationallayers.push({
-                            id: 87,
-                            pid: 80,
-                            name: 'wms数据',
-                            type: 'group',
-                          })
-                        }
-
-                        var properties
-                        var bbox
-                        if (item.properties) {
-                          properties = JSON.parse(item.properties)
-                          bbox =
-                            properties &&
-                            properties.bbox &&
-                            properties.bbox.split(',')
-                        }
-
-                        layersItem = {
-                          flyTo: false,
-                          hasLayer: true,
-                          id: Number('8010' + (20 + i)),
-                          name: item.name || 'wms数据',
-                          pid: 87,
-                          layers: properties && properties.layer,
-                          extent: {
-                            xmin: Number(bbox[0]),
-                            ymin: Number(bbox[1]),
-                            xmax: Number(bbox[2]),
-                            ymax: Number(bbox[3]),
-                          },
-                          crs: properties && properties.crs,
-                          maximumLevel: 13,
-                          type: 'wms',
-                          url: item.url,
-                          visible: false,
-                        }
-                        break
-                      default:
-                        continue
-                        break
-                    }
-
-                    that.config.operationallayers.push(layersItem)
-                  }
-
-                  //绑定添加相关控件
-                  that._addControls()
-                  //优化viewer默认参数相关的
-                  that._optimization()
-                  //根据参数进行设置相关的
-                  that._initForOpts()
-                  //绑定处理的事件
-                  that._initEvent()
-                  that._initLayers()
-                } else {
-                  //绑定添加相关控件
-                  that._addControls()
-                  //优化viewer默认参数相关的
-                  that._optimization()
-                  //根据参数进行设置相关的
-                  that._initForOpts()
-                  //绑定处理的事件
-                  that._initEvent()
-                  that._initLayers()
-                }
-              },
-              error: function error(XMLHttpRequest, textStatus, errorThrown) {
-                //绑定添加相关控件
-                that._addControls()
-                //优化viewer默认参数相关的
-                that._optimization()
-                //根据参数进行设置相关的
-                that._initForOpts()
-                //绑定处理的事件
-                that._initEvent()
-                that._initLayers()
-              },
-            })
+            // $.ajax({
+            //   type: 'GET',
+            //   async: false,
+            //   url:
+            //     serverIP +
+            //     '/auth/getAllResource?datetime=' +
+            //     new Date().format('yyyy-MM-dd HH:mm:ss'),
+            //   success: function success(data) {
+            //     if (data && data.data) {
+            //       data = data.data
+            //       var tempArr = {}
+            //       if (data.length > 0) {
+            //         that.config.operationallayers.push({
+            //           id: 80,
+            //           name: '后台服务数据',
+            //           type: 'group',
+            //         })
+            //       }
+            //       for (var i = 0; i < data.length; i++) {
+            //         var item = data[i]
+            //         item.format = item.format.toLowerCase()
+            //         var layersItem
+            //         switch (item.format) {
+            //           case '3dtiles':
+            //             if (!tempArr['3dtiles']) {
+            //               tempArr['3dtiles'] = true
+            //               that.config.operationallayers.push({
+            //                 id: 81,
+            //                 pid: 80,
+            //                 name: '倾斜模型',
+            //                 type: 'group',
+            //               })
+            //             }
+            //             layersItem = {
+            //               cullWithChildrenBounds: false,
+            //               dynamicScreenSpaceError: true,
+            //               flyTo: false,
+            //               hasLayer: true,
+            //               id: Number('8010' + (20 + i)),
+            //               maximumMemoryUsage: 1024,
+            //               maximumScreenSpaceError: 16,
+            //               name: item.name,
+            //               order: 87,
+            //               pid: 81,
+            //               preferLeaves: true,
+            //               skipLevelOfDetail: true,
+            //               type: item.format,
+            //               url: item.url,
+            //               visible: false,
+            //               _key: '',
+            //             }
+            //             break
+            //           case 'geojson':
+            //             if (!tempArr['geojson']) {
+            //               tempArr['geojson'] = true
+            //               that.config.operationallayers.push({
+            //                 id: 82,
+            //                 pid: 80,
+            //                 name: 'GEOJSON数据',
+            //                 type: 'group',
+            //               })
+            //             }
+            //             layersItem = {
+            //               pid: 82,
+            //               type: item.format,
+            //               name: item.name,
+            //               url: item.url,
+            //               symbol: {
+            //                 styleOptions: {
+            //                   clampToGround: true,
+            //                 },
+            //               },
+            //             }
+            //             break
+            //           case 'kml':
+            //             if (!tempArr['kml']) {
+            //               tempArr['kml'] = true
+            //               that.config.operationallayers.push({
+            //                 id: 83,
+            //                 pid: 80,
+            //                 name: 'KML数据',
+            //                 type: 'group',
+            //               })
+            //             }
+            //             layersItem = {
+            //               pid: 83,
+            //               type: item.format,
+            //               name: item.name,
+            //               url: item.url,
+            //               popup: 'all',
+            //             }
+            //             break
+            //           case 'gltf':
+            //             if (!tempArr['gltf']) {
+            //               tempArr['gltf'] = true
+            //               that.config.operationallayers.push({
+            //                 id: 84,
+            //                 pid: 80,
+            //                 name: 'GLTF数据',
+            //                 type: 'group',
+            //               })
+            //             }
+            //             layersItem = {
+            //               pid: 84,
+            //               type: item.format,
+            //               name: item.name,
+            //               url: item.url,
+            //               position: {
+            //                 y: 31.821083,
+            //                 x: 117.21832,
+            //                 z: 59.87,
+            //               },
+            //               style: {
+            //                 scale: 10,
+            //                 heading: -93,
+            //               },
+            //               popup: '示例信息，测试数据',
+            //               center: {
+            //                 y: 31.821083,
+            //                 x: 117.21832,
+            //                 z: 832.64,
+            //                 heading: 2.3,
+            //                 pitch: -39.2,
+            //                 roll: 0,
+            //               },
+            //             }
+            //             break
+            //           case 'wmts':
+            //             if (!tempArr['wmts']) {
+            //               tempArr['wmts'] = true
+            //               that.config.operationallayers.push({
+            //                 id: 85,
+            //                 pid: 80,
+            //                 name: 'wmts数据',
+            //                 type: 'group',
+            //               })
+            //             }
+            //
+            //             var properties
+            //             var bbox
+            //             if (item.properties) {
+            //               properties = JSON.parse(item.properties)
+            //               bbox =
+            //                 properties &&
+            //                 properties.bbox &&
+            //                 properties.bbox.split(',')
+            //             }
+            //
+            //             var maxLevel = 18
+            //             var matrixIds = new Array(maxLevel)
+            //             for (var z = 0; z <= maxLevel; z++) {
+            //               matrixIds[z] = properties.crs + ':' + z.toString()
+            //             }
+            //
+            //             layersItem = {
+            //               flyTo: false,
+            //               hasLayer: true,
+            //               id: Number('8010' + (20 + i)),
+            //               name: item.name || 'wmts数据',
+            //               pid: 85,
+            //               parameters: {
+            //                 transparent: true,
+            //                 format: item.Format,
+            //               },
+            //               style: '',
+            //               tileMatrixSetID: properties && properties.crs,
+            //               layer: properties && properties.layer,
+            //               extent: {
+            //                 xmin: Number(bbox[0]),
+            //                 ymin: Number(bbox[1]),
+            //                 xmax: Number(bbox[2]),
+            //                 ymax: Number(bbox[3]),
+            //               },
+            //               crs: properties && properties.crs,
+            //               maximumLevel: 13,
+            //               tileMatrixLabels: matrixIds,
+            //               type: 'wmts',
+            //               url: item.url,
+            //               visible: false,
+            //             }
+            //             break
+            //           case 'wfs':
+            //             if (!tempArr['wfs']) {
+            //               tempArr['wfs'] = true
+            //               that.config.operationallayers.push({
+            //                 id: 86,
+            //                 pid: 80,
+            //                 name: 'wfs数据',
+            //                 type: 'group',
+            //               })
+            //             }
+            //
+            //             var properties
+            //             var bbox
+            //             if (item.properties) {
+            //               properties = JSON.parse(item.properties)
+            //               bbox =
+            //                 properties &&
+            //                 properties.bbox &&
+            //                 properties.bbox.split(',')
+            //             }
+            //
+            //             layersItem = {
+            //               flyTo: false,
+            //               hasLayer: true,
+            //               id: Number('8010' + (20 + i)),
+            //               name: item.name || 'WFS数据',
+            //               pid: 86,
+            //               type: 'wfs',
+            //               url: item.url,
+            //               layer: properties && properties.layer,
+            //               extent: {
+            //                 xmin: Number(bbox[0]),
+            //                 ymin: Number(bbox[1]),
+            //                 xmax: Number(bbox[2]),
+            //                 ymax: Number(bbox[3]),
+            //               },
+            //               crs: properties && properties.crs,
+            //               minimumLevel: 13,
+            //               alpha: 0.9,
+            //               visible: false,
+            //             }
+            //             break
+            //           case 'wms':
+            //             if (!tempArr['wms']) {
+            //               tempArr['wms'] = true
+            //               that.config.operationallayers.push({
+            //                 id: 87,
+            //                 pid: 80,
+            //                 name: 'wms数据',
+            //                 type: 'group',
+            //               })
+            //             }
+            //
+            //             var properties
+            //             var bbox
+            //             if (item.properties) {
+            //               properties = JSON.parse(item.properties)
+            //               bbox =
+            //                 properties &&
+            //                 properties.bbox &&
+            //                 properties.bbox.split(',')
+            //             }
+            //
+            //             layersItem = {
+            //               flyTo: false,
+            //               hasLayer: true,
+            //               id: Number('8010' + (20 + i)),
+            //               name: item.name || 'wms数据',
+            //               pid: 87,
+            //               layers: properties && properties.layer,
+            //               extent: {
+            //                 xmin: Number(bbox[0]),
+            //                 ymin: Number(bbox[1]),
+            //                 xmax: Number(bbox[2]),
+            //                 ymax: Number(bbox[3]),
+            //               },
+            //               crs: properties && properties.crs,
+            //               maximumLevel: 13,
+            //               type: 'wms',
+            //               url: item.url,
+            //               visible: false,
+            //             }
+            //             break
+            //           default:
+            //             continue
+            //             break
+            //         }
+            //
+            //         that.config.operationallayers.push(layersItem)
+            //       }
+            //
+            //       //绑定添加相关控件
+            //       that._addControls()
+            //       //优化viewer默认参数相关的
+            //       that._optimization()
+            //       //根据参数进行设置相关的
+            //       that._initForOpts()
+            //       //绑定处理的事件
+            //       that._initEvent()
+            //       that._initLayers()
+            //     } else {
+            //       //绑定添加相关控件
+            //       that._addControls()
+            //       //优化viewer默认参数相关的
+            //       that._optimization()
+            //       //根据参数进行设置相关的
+            //       that._initForOpts()
+            //       //绑定处理的事件
+            //       that._initEvent()
+            //       that._initLayers()
+            //     }
+            //   },
+            //   error: function error(XMLHttpRequest, textStatus, errorThrown) {
+            //     //绑定添加相关控件
+            //     that._addControls()
+            //     //优化viewer默认参数相关的
+            //     that._optimization()
+            //     //根据参数进行设置相关的
+            //     that._initForOpts()
+            //     //绑定处理的事件
+            //     that._initEvent()
+            //     that._initLayers()
+            //   },
+            // })
             //绑定添加相关控件
             //this._addControls();
 

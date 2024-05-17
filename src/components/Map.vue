@@ -127,7 +127,7 @@ export default {
             maximumLevel: 18
           });
           let ImageryProvider2 = new Cesium.WebMapTileServiceImageryProvider({
-            url: 'http://t0.tianditu.com/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=902014349629fe7d6d4b5273211a2fd6',
+            url: 'http://t0.tianditu.com/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=0d85a621fd7f80173ea848b1951c270e',
             layer: 'img_z',
             style: 'default',
             format: 'image/jpeg',

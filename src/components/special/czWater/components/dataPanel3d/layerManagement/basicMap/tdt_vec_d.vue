@@ -1,4 +1,4 @@
-<!--地形晕渲-->
+<!--矢量地图-->
 <template></template>
 
 <script>
