@@ -1,6 +1,8 @@
 <template>
-  <div class="showContainer">
-    <div class="head_title_arrow">图层管理</div>
+  <div class="showContainer"
+       :style="{left:location === 'left'?'45px':'auto',right:location === 'right'?'45px':'auto'}"
+  >
+    <div class="head_title_arrow">图层管理{{ location }}</div>
     <div class="content">
       <el-tree
           ref="treeRef"
@@ -70,6 +72,7 @@ export default {
       showTypeList: ['img_d'],
     }
   },
+  props: ['location'],
   components: {
     Tdt_img_d,
     Tdt_img_z,
@@ -105,9 +108,9 @@ export default {
   },
   mounted() {
     this.treeData = treeDataJson
-    setTimeout(()=>{
-      this.$refs.treeRef.setChecked([7],true)
-    },2000)
+    setTimeout(() => {
+      this.$refs.treeRef.setChecked([7], true)
+    }, 2000)
     // 设置默认选中  71,72,73,74,75,76
   }
 }
@@ -116,8 +119,8 @@ export default {
 <style lang="less" scoped>
 .showContainer {
   position: absolute;
-  top: 0px;
-  right: 45px;
+  top: 45px;
+  //right: 45px;
   font-size: 12px;
   padding: 10px;
   display: flex;
@@ -128,6 +131,7 @@ export default {
   overflow: auto;
   width: 220px;
   border-radius: 4px;
+  z-index: 99999;
 
   .content {
     margin-top: 10px;

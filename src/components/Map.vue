@@ -88,6 +88,7 @@ export default {
           // _viewer.das.openFlyAnimation();
           // viewer 不存储在 data 中  只挂接到组件属性上 在组件内部使用
           window.dasViewer = _viewer;
+          window.dasViewer1 = _viewer;
           // 标绘类
           window.dasDrawControl = new das3d.Draw({
             viewer: _viewer,
