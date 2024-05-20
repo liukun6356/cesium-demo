@@ -6,7 +6,7 @@ export default {
   mounted() {
     const viewer = window.dasViewer;
     let ImageryProvider = new Cesium.WebMapTileServiceImageryProvider({
-      url: 'http://{s}.tianditu.com/cta_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cta&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=' + process.env.VUE_APP_TDT_KEY,
+      url: 'https://{s}.tianditu.gov.cn/cta_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cta&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=' + process.env.VUE_APP_TDT_KEY,
       layer: 'ter_z',
       style: 'default',
       format: 'image/jpeg',

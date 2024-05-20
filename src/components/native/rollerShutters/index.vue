@@ -24,7 +24,7 @@ export default {
     // curImageryLayer.splitDirection = Cesium.ImagerySplitDirection.LEFT
     // 添加卷帘右边图层
     imageryProviderL = await window.dasViewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
-      url: 'http://{s}.tianditu.com/vec_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=vec&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=' + process.env.VUE_APP_TDT_KEY,
+      url: 'https://{s}.tianditu.gov.cn/vec_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=vec&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=' + process.env.VUE_APP_TDT_KEY,
       layer: 'vec_d',
       style: 'default',
       format: 'image/jpeg',
@@ -35,7 +35,7 @@ export default {
     imageryProviderL.splitDirection = Cesium.ImagerySplitDirection.LEFT
     window.dasViewer.imageryLayers.raiseToTop(imageryProviderL)
     imageryProviderR = await window.dasViewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
-      url: 'http://{s}.tianditu.com/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=' + process.env.VUE_APP_TDT_KEY,
+      url: 'https://{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=' + process.env.VUE_APP_TDT_KEY,
       layer: 'vec_z',
       style: 'default',
       format: 'image/jpeg',

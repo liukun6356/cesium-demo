@@ -128,7 +128,7 @@ export default {
             maximumLevel: 18
           });
           let ImageryProvider =  _viewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
-            url: 'http://{s}.tianditu.com/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk='+ process.env.VUE_APP_TDT_KEY,
+            url: 'https://{s}.tianditu.gov.cn/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk='+ process.env.VUE_APP_TDT_KEY,
             layer: 'img_d',
             style: 'default',
             format: 'image/jpeg',
