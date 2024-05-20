@@ -117,15 +117,6 @@ export default {
           //   Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
           // );
 
-          let ImageryProvider = new Cesium.WebMapTileServiceImageryProvider({
-            url: 'http://{s}.tianditu.com/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk='+ process.env.VUE_APP_TDT_KEY,
-            layer: 'img_d',
-            style: 'default',
-            format: 'image/jpeg',
-            tileMatrixSetID: 'GoogleMapsCompatible',
-            subdomains: ['t0', 't1', 't2', 't3', 't4', 't5', 't6', 't7'],
-            maximumLevel: 18
-          });
           let ImageryProvider2 = new Cesium.WebMapTileServiceImageryProvider({
             url: 'http://t0.tianditu.com/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=0d85a621fd7f80173ea848b1951c270e',
             layer: 'img_z',
@@ -135,7 +126,16 @@ export default {
             subdomains: ['t0', 't1', 't2', 't3', 't4', 't5', 't6', 't7'],
             maximumLevel: 18
           });
-          _viewer.imageryLayers.addImageryProvider(ImageryProvider);
+          let ImageryProvider =  _viewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
+            url: 'http://{s}.tianditu.com/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk='+ process.env.VUE_APP_TDT_KEY,
+            layer: 'img_d',
+            style: 'default',
+            format: 'image/jpeg',
+            tileMatrixSetID: 'GoogleMapsCompatible',
+            subdomains: ['t0', 't1', 't2', 't3', 't4', 't5', 't6', 't7'],
+            maximumLevel: 18,
+          }));
+          ImageryProvider.sub_type = 'left_layer'
           // _viewer.imageryLayers.addImageryProvider(ImageryProvider2);
         },
       };

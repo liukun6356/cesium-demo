@@ -171,6 +171,16 @@ const routes = [
                 component: () => import('@/components/native/modelTree/index.vue'),
             },
             {
+                path: '/dualScreen',
+                name: "dualScreen",
+                component: () => import('@/components/native/dualScreen/index.vue'),
+            },
+            {
+                path: '/rollerShutters',
+                name: "rollerShutters",
+                component: () => import('@/components/native/rollerShutters/index.vue'),
+            },
+            {
                 path: '/aaa',
                 name: "aaa",
                 component: () => import('@/components/native/aaa/index.vue'),
