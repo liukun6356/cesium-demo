@@ -23,7 +23,7 @@
 import {LineFlowMaterialProperty} from "./lineFlowMaterialProperty"
 import tf from "/public/img/marker/tf.gif"
 
-let taifenDatasource, divpoint
+let taifenDatasource, divpoint, curPosition
 export default {
   data() {
     return {}
@@ -33,11 +33,15 @@ export default {
     taifenDatasource = new Cesium.CustomDataSource("taifen")
     viewer.dataSources.add(taifenDatasource);
     this.addLine()
+    // viewer.camera.changed.addEventListener(this.bindPopupPos);
+    viewer.scene.postRender.addEventListener(this.bindPopupPos);
   },
   beforeDestroy() {
     const viewer = window.dasViewer
     viewer.dataSources.remove(taifenDatasource);
     divpoint.destroy()
+    // viewer.camera.changed.removeEventListener(this.bindPopupPos);
+    viewer.scene.postRender.removeEventListener(this.bindPopupPos);
   },
   methods: {
     addLine() {
@@ -73,12 +77,11 @@ export default {
     },
     startRun() {
       const self = this
-      const viewer = window.dasViewer
       const startTime = Cesium.JulianDate.now()
       // 初始点位和目标点位
       const startPosition = Cesium.Cartesian3.fromDegrees(113.129544, 25.630585);
       const targetPosition = Cesium.Cartesian3.fromDegrees(112.91728, 25.816368);
-      const curPosition = new Cesium.Cartesian3()
+      curPosition = new Cesium.Cartesian3()
       divpoint.position = new Cesium.CallbackProperty(function (time) {
         const elapsedTime = Cesium.JulianDate.secondsDifference(time, startTime);
         const ratio = elapsedTime / 8;
@@ -86,12 +89,17 @@ export default {
           return targetPosition.clone();
         } else {
           Cesium.Cartesian3.lerp(startPosition, targetPosition, ratio, curPosition);
-          const CanvasCoordinates = viewer.scene.cartesianToCanvasCoordinates(curPosition)
-          self.$refs.taifengRef.style.left = (CanvasCoordinates.x + 50) + 'px'
-          self.$refs.taifengRef.style.top = (CanvasCoordinates.y - 50) + 'px'
+          self.bindPopupPos()
           return curPosition
         }
       }, false);
+    },
+    bindPopupPos() {
+      if (!curPosition) return
+      const viewer = window.dasViewer
+      const CanvasCoordinates = viewer.scene.cartesianToCanvasCoordinates(curPosition)
+      this.$refs.taifengRef.style.left = (CanvasCoordinates.x + 50) + 'px'
+      this.$refs.taifengRef.style.top = (CanvasCoordinates.y - 50) + 'px'
     }
   }
 }
