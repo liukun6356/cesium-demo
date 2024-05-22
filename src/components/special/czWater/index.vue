@@ -26,6 +26,8 @@
       </Transition>
 
     </div>
+    <!--雷达-->
+    <radar-reflect v-if="rightTool2selectIndex === 6"/>
     <!--台风-->
     <taifeng v-if="rightTool2selectIndex === 8"/>
     <!--    反遮罩-->
@@ -51,6 +53,7 @@ import DataPanel3d from "./components/dataPanel3d/index.vue"
 import Boundary from "./components/map/boundary.vue"
 import waterSurface from "./components/map/waterSurface.vue"
 import Taifeng from "./components/taifeng/index.vue"
+import RadarReflect from "./components/radarReflect/index.vue"
 
 
 export default {
@@ -59,7 +62,8 @@ export default {
     DataPanel3d,
     Boundary,
     waterSurface,
-    Taifeng
+    Taifeng,
+    RadarReflect
   },
   data() {
     return {
@@ -96,7 +100,6 @@ export default {
           break
         default:
           this.rightTool2selectIndex = this.rightTool2selectIndex === index ? -1 : index
-          console.log(this.rightTool2selectIndex, 7777)
           break
       }
     },

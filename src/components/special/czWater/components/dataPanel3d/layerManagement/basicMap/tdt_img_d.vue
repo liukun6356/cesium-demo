@@ -15,7 +15,6 @@ export default {
       maximumLevel: 18
     });
     viewer.imageryLayers.addImageryProvider(ImageryProvider);
-    console.log(231234141241234)
     const layer = viewer.imageryLayers._layers.find(layer=>layer._imageryProvider._layer ==='img_d')
     viewer.imageryLayers.raiseToTop(layer)
   },
