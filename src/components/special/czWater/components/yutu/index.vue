@@ -7,8 +7,8 @@ import img3 from "./img/cloud03.png"
 import img4 from "./img/cloud04.png"
 import img5 from "./img/cloud05.png"
 
-const layerArr = []
-let idxTimer, alphaStep = 0.01, step = 0
+let layerArr1 = []
+let idxTimer, alphaStep1 = 0.01,  step1 = 0
 export default {
   data() {
     return {
@@ -16,13 +16,17 @@ export default {
     }
   },
   mounted() {
-    this.addImageryProvider(2)
+    layerArr1 = []
+    this.addImageryProvider(1)
   },
-  beforeDestroy() {
+  destroyed() {
     const viewer = window.dasViewer
-    layerArr.forEach(layer => {
+    layerArr1.forEach(layer => {
       viewer.imageryLayers.remove(layer);
     })
+    alphaStep1 = 0.01
+     step1 = 0
+    idxTimer = null
   },
   methods: {
     addImageryProvider(time) {
@@ -34,35 +38,35 @@ export default {
         });
         const imagelayer = new Cesium.ImageryLayer(imageryProvider, {alpha: 0})
         viewer.imageryLayers.add(imagelayer);
-        layerArr.push(imagelayer)
+        layerArr1.push(imagelayer)
       })
-      step = 0
+       step1 = 0
       this.changeRadarAlpha(time)
     },
     changeRadarAlpha(time) {
       const self = this
-      if (step > layerArr.length - 1) {
-        step = 0;
-        layerArr[layerArr.length - 1].alpha = 0;
+      if ( step1 > layerArr1.length - 1) {
+         step1 = 0;
+        layerArr1[layerArr1.length - 1].alpha = 0;
       }
-      var layer1 = layerArr[step];
-      var layer2 = layerArr[step + 1];
+      var layer1 = layerArr1[ step1];
+      var layer2 = layerArr1[ step1 + 1];
       if (!layer1 || !layer2) return;
       layer1.alpha = 1;
       layer2.alpha = 0;
 
       clearInterval(idxTimer);
       idxTimer = window.setInterval(function () {
-        layer1.alpha -= alphaStep;
-        layer2.alpha += alphaStep;
+        layer1.alpha -= alphaStep1;
+        layer2.alpha += alphaStep1;
 
-        if (layer1.alpha < alphaStep) {
+        if (layer1.alpha < alphaStep1) {
           layer1.alpha = 0;
-          step++;
+           step1++;
           self.changeRadarAlpha(time)
         }
 
-      }, time * 1000 * alphaStep);
+      }, time * 1000 * alphaStep1);
     }
   }
 }

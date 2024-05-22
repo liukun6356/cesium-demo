@@ -7,7 +7,7 @@ import img3 from "./img/201906211130.png"
 import img4 from "./img/201906211136.png"
 import img5 from "./img/201906211142.png"
 
-const layerArr = []
+let layerArr = []
 let idxTimer, alphaStep = 0.01, step = 0
 export default {
   data() {
@@ -16,13 +16,17 @@ export default {
     }
   },
   mounted() {
-    this.addImageryProvider(2)
+    layerArr = []
+    this.addImageryProvider(1)
   },
-  beforeDestroy() {
+  destroyed() {
     const viewer = window.dasViewer
     layerArr.forEach(layer => {
       viewer.imageryLayers.remove(layer);
     })
+    alphaStep = 0.01
+    step = 0
+    idxTimer = null
   },
   methods: {
     addImageryProvider(time) {
@@ -61,7 +65,6 @@ export default {
           step++;
           self.changeRadarAlpha(time)
         }
-
       }, time * 1000 * alphaStep);
     }
   }
