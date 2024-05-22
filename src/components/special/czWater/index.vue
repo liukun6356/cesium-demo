@@ -24,7 +24,10 @@
       <Transition name="global_transition">
         <map-scene v-if="rightTool2selectIndex === 2"/>
       </Transition>
+
     </div>
+    <!--台风-->
+    <taifeng v-if="rightTool2selectIndex === 8"/>
     <!--    反遮罩-->
     <Boundary v-if="boundaryShow"/>
     <waterSurface/>
@@ -40,18 +43,23 @@ import gj from '@/assets/img/czWater/工具@2x.png'
 import my from '@/assets/img/czWater/漫游@2x.png'
 import fz from '@/assets/img/czWater/仿真模拟.png'
 import dt from '@/assets/img/czWater/地图复位@2x.png'
+import yt from '@/assets/img/czWater/数值@2x.png'
+
 
 import MapScene from "./components/scene"
 import DataPanel3d from "./components/dataPanel3d/index.vue"
 import Boundary from "./components/map/boundary.vue"
 import waterSurface from "./components/map/waterSurface.vue"
+import Taifeng from "./components/taifeng/index.vue"
+
 
 export default {
   components: {
     MapScene,
     DataPanel3d,
     Boundary,
-    waterSurface
+    waterSurface,
+    Taifeng
   },
   data() {
     return {
@@ -68,6 +76,9 @@ export default {
         {label: '漫游', src: my},
         {label: '模拟', src: fz},
         {label: '全图', src: dt},
+        {label: '雷达', src: twoD},
+        {label: '云图', src: yt},
+        {label: '台风', src: threeD},
       ],
       boundaryShow: false
     }
@@ -85,6 +96,7 @@ export default {
           break
         default:
           this.rightTool2selectIndex = this.rightTool2selectIndex === index ? -1 : index
+          console.log(this.rightTool2selectIndex, 7777)
           break
       }
     },
