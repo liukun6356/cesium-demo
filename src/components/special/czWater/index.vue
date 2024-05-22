@@ -28,6 +28,8 @@
     </div>
     <!--雷达-->
     <radar-reflect v-if="rightTool2selectIndex === 6"/>
+    <!--云图-->
+    <yutu v-if="rightTool2selectIndex === 7"/>
     <!--台风-->
     <taifeng v-if="rightTool2selectIndex === 8"/>
     <!--    反遮罩-->
@@ -54,6 +56,7 @@ import Boundary from "./components/map/boundary.vue"
 import waterSurface from "./components/map/waterSurface.vue"
 import Taifeng from "./components/taifeng/index.vue"
 import RadarReflect from "./components/radarReflect/index.vue"
+import Yutu from "./components/yutu/index"
 
 
 export default {
@@ -63,7 +66,8 @@ export default {
     Boundary,
     waterSurface,
     Taifeng,
-    RadarReflect
+    RadarReflect,
+    Yutu
   },
   data() {
     return {
