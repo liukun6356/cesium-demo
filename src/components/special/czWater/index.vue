@@ -126,12 +126,12 @@ export default {
   },
   mounted() {
     const viewer = window.dasViewer;
-    let terrainProvider = new Cesium.CesiumTerrainProvider({
-      url: 'https://fm-chenzhou.daspatial.com/chenzhou/czservice/gisadmin-system/profile/chenzhouDem',
-    });
+    // let terrainProvider = new Cesium.CesiumTerrainProvider({
+    //   url: 'https://fm-chenzhou.daspatial.com/chenzhou/czservice/gisadmin-system/profile/chenzhouDem',
+    // });
     this.boundaryShow = true
 
-    viewer.scene.globe.terrainProvider = terrainProvider;
+    // viewer.scene.globe.terrainProvider = terrainProvider;
     // 打开深度监测
     window.dasViewer.scene.globe.depthTestAgainstTerrain = true;
   }

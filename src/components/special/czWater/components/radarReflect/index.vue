@@ -12,11 +12,10 @@ let idxTimer, alphaStep = 0.01, step = 0
 export default {
   data() {
     return {
-      urlArr: [img1, img2, img3, img4, img5]
+      urlArr: [img1, img2, img3, img4, img5],
     }
   },
   mounted() {
-    layerArr = []
     this.addImageryProvider(1)
   },
   destroyed() {
@@ -24,9 +23,8 @@ export default {
     layerArr.forEach(layer => {
       viewer.imageryLayers.remove(layer);
     })
-    alphaStep = 0.01
-    step = 0
-    idxTimer = null
+    layerArr = []
+    window.clearInterval(idxTimer);
   },
   methods: {
     addImageryProvider(time) {
@@ -55,8 +53,9 @@ export default {
       layer1.alpha = 1;
       layer2.alpha = 0;
 
-      clearInterval(idxTimer);
+      window.clearInterval(idxTimer);
       idxTimer = window.setInterval(function () {
+        console.log(layer1.alpha, layer2.alpha)
         layer1.alpha -= alphaStep;
         layer2.alpha += alphaStep;
 
@@ -66,6 +65,7 @@ export default {
           self.changeRadarAlpha(time)
         }
       }, time * 1000 * alphaStep);
+
     }
   }
 }
