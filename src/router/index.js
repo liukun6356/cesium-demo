@@ -181,9 +181,9 @@ const routes = [
                 component: () => import('@/components/native/rollerShutters/index.vue'),
             },
             {
-                path: '/aaa',
-                name: "aaa",
-                component: () => import('@/components/native/aaa/index.vue'),
+                path: '/polylineFly',
+                name: "polylineFly",
+                component: () => import('@/components/native/polylineFly/index.vue'),
             },
             /* native end */
             /* webgl start */

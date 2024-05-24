@@ -26,6 +26,7 @@
         <li @click="$router.push('/modelTree')">模型树</li>
         <li @click="$router.push('/dualScreen')">双屏</li>
         <li @click="$router.push('/rollerShutters')">卷帘</li>
+        <li @click="$router.push('/polylineFly')">轨道飞行</li>
       </ul>
       <ul>
         <li @click="$router.push('/floorSuperposition')">楼层叠加</li>
