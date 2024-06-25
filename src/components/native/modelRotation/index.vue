@@ -28,7 +28,7 @@ export default {
           uri: process.env.VUE_APP_GIS_API + '/modelView/model4.glb',
         }
       });
-      // viewer.flyTo(modelRotationEntity);
+      viewer.flyTo(modelRotationEntity);
       // 每一帧更新模型的姿态，实现旋转效果
       const self = this
       viewer.clock.onTick.addEventListener(function (clock) {
@@ -121,8 +121,8 @@ export default {
     }
   },
   mounted() {
-    // this.addModelRotation()
-    this.addRelativeModel()
+    this.addModelRotation()
+    // this.addRelativeModel()
     // this.addShaper()
   },
 }

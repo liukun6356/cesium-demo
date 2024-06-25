@@ -90,6 +90,7 @@ export default {
         } else {
           Cesium.Cartesian3.lerp(startPosition, targetPosition, ratio, curPosition);
           self.bindPopupPos()
+          console.log(curPosition,8888)
           return curPosition
         }
       }, false);

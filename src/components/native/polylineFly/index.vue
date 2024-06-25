@@ -1,107 +1,117 @@
 <template>
   <div>
-    <el-button class="btn" >开始</el-button>
+    <el-button class="btn" @click="start">开始</el-button>
   </div>
 </template>
 
 <script>
+let lineEntity,
+    lineDatasource = new Cesium.CustomDataSource("line-polygun"),
+    wrjModelDatasource = new Cesium.CustomDataSource("wrj"),
+    wrjEntity,
+    curPosition
 export default {
-  data(){
-    return{}
+  data() {
+    return {
+      // 飞行区域边界线坐标
+      coordinates: [[116.069898, 31.303655], [116.098708, 31.322126], [116.108063, 31.311256], [116.079317, 31.292959], [116.069898, 31.303655]],
+      // 飞行路线
+      points: [[116.069898, 31.303655, 200], [116.098708, 31.322126, 200], [116.108063, 31.311256, 200], [116.079317, 31.292959, 200]],
+      // 当前飞行位置
+      curRuningArr_i: 0,
+      curRuningArr:[],
+    }
   },
   mounted() {
-    alert(222)
+    const viewer = window.dasViewer;
+    viewer.scene.terrainProvider = new Cesium.EllipsoidTerrainProvider()
+    viewer.dataSources.add(lineDatasource);
+    viewer.dataSources.add(wrjModelDatasource);
+    this.initwork()
+  },
+  destory() {
+    lineDatasource.entities.removeAll()
+    viewer.dataSources.remove(lineDatasource);
+    wrjModelDatasource.entities.removeAll()
+    viewer.dataSources.remove(wrjModelDatasource);
+  },
+  methods: {
+    initwork() {
+      const viewer = window.dasViewer;
+      const pos = Cesium.Cartesian3.fromDegreesArray(this.coordinates.flat())
+      const entity = lineDatasource.entities.add({
+        polyline: {
+          positions: pos,
+          width: 1.5,
+          material: Cesium.Color.fromCssColorString("#C0C0C0").withAlpha(0.5),
+          // disableDepthTestDistance: Number.POSITIVE_INFINITY, //解决遮挡问题
+          heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,
+        }
+      })
+      viewer.flyTo(entity)
+      this.addModel()
+    },
+    addModel() {
+      const viewer = window.dasViewer;
+      const positions = Cesium.Cartesian3.fromDegreesArrayHeights(this.points.flat())
+      wrjEntity = viewer.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(116.069898, 31.303655, 200),
+        model: {
+          uri: process.env.VUE_APP_MODEL_API + '/wrj.glb',
+          scale: 100,
+          horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+          verticalOrigin: Cesium.VerticalOrigin.CENTER,
+        },
+        polyline: {
+          positions: positions,
+          width: 1.5,
+          material: Cesium.Color.fromCssColorString("red").withAlpha(1),
+          heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,
+        }
+      })
+      console.log(process.env.VUE_APP_MODEL_API, 222)
+    },
+    start() {
+      let runQueue = this.points.map((_, i) => ([this.points[i], this.points[i + 1]]))
+      runQueue.pop()
+      runQueue = runQueue.map(pos => ({
+        pos,
+        startCartesian3:Cesium.Cartesian3.fromDegrees(pos[0][0], pos[0][1], pos[0][2]), // 该路径起始点
+        cartesian3Pos: pos.map(item => Cesium.Cartesian3.fromDegrees(item[0], item[1], item[2])) // 该路径起始点和目标点
+      }))
+      this.runRecursion(0, runQueue)
+    },
+    runRecursion(i, runArr, callback) {
+      const self = this
+      const speed = 700 // todo 默认速度为500m/s
+      const cartesian3Pos = runArr[i].cartesian3Pos
+      const lineArr = runArr.slice(0,i).map(item=>item.startCartesian3).flat()
+      self.curRuningArr_i = i
+      self.curRuningArr = runArr
+      self.runFn(cartesian3Pos,lineArr, speed, () => {
+        if (++i < runArr.length) self.runRecursion(i, runArr, callback)
+      })
+    },
+    runFn([startPosition, targetPosition],lineArr, speed, callback) { // [startPosition 初始点位 targetPosition 目标点位] lineArr 路径线点位 speed 速度
+      const subtract = Cesium.Cartesian3.subtract(startPosition, targetPosition, new Cesium.Cartesian3());
+      const meter = Cesium.Cartesian3.magnitude(subtract) // 得出距离多少米
+      const step = meter / speed
+      const startTime = Cesium.JulianDate.now()
+      curPosition = new Cesium.Cartesian3()
+      wrjEntity.position = new Cesium.CallbackProperty(() => {
+        const elapsedTime = Cesium.JulianDate.secondsDifference(Cesium.JulianDate.now(), startTime);
+        const ratio = elapsedTime / step;
+        if (ratio >= 1.0) {
+          callback()
+          return targetPosition.clone()
+        } else {
+          return Cesium.Cartesian3.lerp(startPosition, targetPosition, ratio, curPosition)
+        }
+      }, false);
+    },
   }
 }
 </script>
-
-<!--<script>-->
-<!--let handler;-->
-<!--const pointHeatDatasource = new Cesium.CustomDataSource("point");-->
-
-<!--export default {-->
-<!--  data() {-->
-<!--    return {-->
-<!--      pos: [[99.139502, 25.131031, 2000], [99.139869, 25.131026, 2000]],// 可从geojson获取posArr-->
-<!--      curIndex: 1-->
-<!--    }-->
-<!--  },-->
-<!--  methods: {-->
-<!--    start() {-->
-<!--      const self = this-->
-<!--      this.flyto(this.pos[0],0.1,()=>{-->
-<!--        self.flyRecursion()-->
-<!--      })-->
-<!--    },-->
-<!--    flyRecursion() {-->
-<!--      const self = this-->
-<!--      const item = self.pos[self.curIndex]-->
-<!--      self.flyto(item,5, () => {-->
-<!--        self.curIndex++-->
-<!--        if (this.curIndex < this.pos.length) {-->
-<!--          self.flyRecursion(this.curIndex)-->
-<!--        }else{-->
-<!--          self.curIndex = 1-->
-<!--        }-->
-<!--      })-->
-<!--    },-->
-<!--    onMouseClick(movement) {-->
-<!--      var pickedObject = window.dasViewer.scene.pick(movement.position);-->
-<!--      if (!Cesium.defined(pickedObject) || !Cesium.defined(pickedObject.id)) return;-->
-<!--      const entity = pickedObject.id;-->
-<!--      if (!(entity instanceof Cesium.Entity) || entity.customType !== "dsy-point") return;-->
-<!--      this.flyToEntity(entity)-->
-<!--      console.log(entity.pos, '点的坐标')-->
-<!--    },-->
-<!--    flyto(item, duration, callback) {-->
-<!--      window.dasViewer.camera.flyTo({-->
-<!--        destination: Cesium.Cartesian3.fromDegrees(item[0], item[1], item[2] + 1e2),// 坐标位置-->
-<!--        duration: duration ? duration : 5, // 时间-->
-<!--        // duration: &#45;&#45;,-->
-<!--        // easingFunction: Cesium.EasingFunction.LINEAR_NONE,//速度曲线-->
-<!--        // flyOverLongitude: flyOverLongitude,-->
-<!--        orientation: {//设置方向-->
-<!--          // direction: &#45;&#45;,//方向位置-->
-<!--          // up: camerastate.up//向上位置-->
-<!--        },-->
-<!--        complete: () => {//飞行完成回调方法-->
-<!--          callback && typeof callback === 'function' && callback()-->
-<!--        }-->
-<!--      });-->
-<!--    },-->
-<!--    flyToEntity(entity) {-->
-<!--      window.dasViewer.flyTo(entity);-->
-<!--    },-->
-<!--    addPoint() {-->
-<!--      this.pos.forEach((item, i) => {-->
-<!--        pointHeatDatasource.entities.add({-->
-<!--          position: Cesium.Cartesian3.fromDegrees(item[0], item[1], item[2]),-->
-<!--          customType: "dsy-point",-->
-<!--          show: true,-->
-<!--          point: {-->
-<!--            pixelSize: 10,-->
-<!--            color: Cesium.Color.fromCssColorString("red"),-->
-<!--            disableDepthTestDistance: Number.POSITIVE_INFINITY,-->
-<!--            scaleByDistance: new Cesium.NearFarScalar(2000, 1, 1e4, 0.6),// 随着距离缩放-->
-<!--            heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,-->
-<!--            // distanceDisplayCondition: new Cesium.DistanceDisplayCondition(30000, 80000),-->
-<!--          },-->
-<!--          pos: item-->
-<!--        });-->
-<!--      })-->
-<!--    }-->
-<!--  },-->
-<!--  mounted() {-->
-<!--    handler = new Cesium.ScreenSpaceEventHandler(window.dasViewer.scene.canvas);-->
-<!--    handler.setInputAction(this.onMouseClick, Cesium.ScreenSpaceEventType.LEFT_CLICK);-->
-<!--    window.dasViewer.dataSources.add(pointHeatDatasource);-->
-<!--    this.addPoint()-->
-<!--  },-->
-<!--  beforeDestroy() {-->
-<!--    window.dasViewer.dataSources.remove(pointHeatDatasource);-->
-<!--  }-->
-<!--}-->
-<!--</script>-->
 
 <style lang="less" scoped>
 .btn {
