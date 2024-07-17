@@ -9,7 +9,10 @@ let lineEntity,
     lineDatasource = new Cesium.CustomDataSource("line-polygun"),
     wrjModelDatasource = new Cesium.CustomDataSource("wrj"),
     wrjEntity,
-    curPosition
+    wrjLineEntity,
+    curPosition,
+    lineArr =[]
+
 export default {
   data() {
     return {
@@ -19,7 +22,7 @@ export default {
       points: [[116.069898, 31.303655, 200], [116.098708, 31.322126, 200], [116.108063, 31.311256, 200], [116.079317, 31.292959, 200]],
       // 当前飞行位置
       curRuningArr_i: 0,
-      curRuningArr:[],
+      curRuningArr: [],
     }
   },
   mounted() {
@@ -54,7 +57,7 @@ export default {
     addModel() {
       const viewer = window.dasViewer;
       const positions = Cesium.Cartesian3.fromDegreesArrayHeights(this.points.flat())
-      wrjEntity = viewer.entities.add({
+      wrjEntity = wrjModelDatasource.entities.add({
         position: Cesium.Cartesian3.fromDegrees(116.069898, 31.303655, 200),
         model: {
           uri: process.env.VUE_APP_MODEL_API + '/wrj.glb',
@@ -62,21 +65,26 @@ export default {
           horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
           verticalOrigin: Cesium.VerticalOrigin.CENTER,
         },
+      })
+      wrjLineEntity = wrjModelDatasource.entities.add({
+
         polyline: {
           positions: positions,
           width: 1.5,
           material: Cesium.Color.fromCssColorString("red").withAlpha(1),
-          heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,
+          heightReference: Cesium.HeightReference.NONE,
         }
       })
-      console.log(process.env.VUE_APP_MODEL_API, 222)
+      // viewer.scene.postRender.addEventListener(()=>{
+      //   wrjLineEntity.polyline.positions = lineArr
+      // });
     },
     start() {
       let runQueue = this.points.map((_, i) => ([this.points[i], this.points[i + 1]]))
       runQueue.pop()
       runQueue = runQueue.map(pos => ({
         pos,
-        startCartesian3:Cesium.Cartesian3.fromDegrees(pos[0][0], pos[0][1], pos[0][2]), // 该路径起始点
+        startCartesian3: Cesium.Cartesian3.fromDegrees(pos[0][0], pos[0][1], pos[0][2]), // 该路径起始点
         cartesian3Pos: pos.map(item => Cesium.Cartesian3.fromDegrees(item[0], item[1], item[2])) // 该路径起始点和目标点
       }))
       this.runRecursion(0, runQueue)
@@ -85,14 +93,14 @@ export default {
       const self = this
       const speed = 700 // todo 默认速度为500m/s
       const cartesian3Pos = runArr[i].cartesian3Pos
-      const lineArr = runArr.slice(0,i).map(item=>item.startCartesian3).flat()
+      lineArr = runArr.slice(0, Math.max(1, i + 1)).map(item => item.startCartesian3).flat()
       self.curRuningArr_i = i
       self.curRuningArr = runArr
-      self.runFn(cartesian3Pos,lineArr, speed, () => {
+      self.runFn(cartesian3Pos, lineArr, speed, () => {
         if (++i < runArr.length) self.runRecursion(i, runArr, callback)
       })
     },
-    runFn([startPosition, targetPosition],lineArr, speed, callback) { // [startPosition 初始点位 targetPosition 目标点位] lineArr 路径线点位 speed 速度
+    runFn([startPosition, targetPosition], lineArr, speed, callback) { // [startPosition 初始点位 targetPosition 目标点位] lineArr 路径线点位 speed 速度
       const subtract = Cesium.Cartesian3.subtract(startPosition, targetPosition, new Cesium.Cartesian3());
       const meter = Cesium.Cartesian3.magnitude(subtract) // 得出距离多少米
       const step = meter / speed
